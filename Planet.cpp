@@ -10,15 +10,15 @@ Planet::Planet(string color, int capacity, int baseTemperature) : SpaceObject(co
     this->baseTemperature = baseTemperature;
 }
 
-int Planet::getCapacity() {
+int Planet::getCapacity() const {
     return capacity;
 }
 
-int Planet::getTemperature() {
+int Planet::getTemperature() const {
     return baseTemperature + 100; //FOR SUN DISTANCE CALC
 }
 
-bool Planet::isHabitable() {
+bool Planet::isHabitable() const {
     return true;
 }
 
@@ -26,10 +26,14 @@ void Planet::setOccupant(AlienBase* occupant) {
     this->occupant = occupant;
 }
 
-int Planet::getHazard() { //CAN SET TRIGGER FREQUENCY/CHANCE LATER
+AlienBase* Planet::getOccupant() const {
+    return occupant;
+}
+
+int Planet::getHazard() const { //CAN SET TRIGGER FREQUENCY/CHANCE LATER
     return 0;
 }
 
-int Planet::getBonus() {
+int Planet::getBonus() const {
     return 0;
 }
