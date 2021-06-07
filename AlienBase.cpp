@@ -8,6 +8,6 @@ AlienBase::AlienBase() {
     name = "TEMP NAME";
 }
 
-string AlienBase::getName() {
+string AlienBase::getName() const {
     return name;
 }
