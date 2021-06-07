@@ -13,7 +13,7 @@ private:
 public:
     SpaceObject();
     SpaceObject(string color);
-    virtual bool isHabitable();
+    virtual bool isHabitable() const;
     string getColor() const;
 };
 
