@@ -12,6 +12,6 @@ private:
     string name;
 public:
     AlienBase();
-    string getName(); 
+    string getName() const; 
 };
 #endif
