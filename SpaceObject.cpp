@@ -10,7 +10,7 @@ SpaceObject::SpaceObject(string color) {
     this->color = color;
 }
 
-bool SpaceObject::isHabitable() {
+bool SpaceObject::isHabitable() const {
     return false;
 }
 
