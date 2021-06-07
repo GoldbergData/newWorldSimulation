@@ -14,12 +14,13 @@ private:
     int baseTemperature;
 public:
     Planet(string color, int capacity, int baseTemperature);
-    int getCapacity();
-    int getTemperature();
-    bool isHabitable() override;
+    int getCapacity() const;
+    int getTemperature() const;
+    virtual bool isHabitable() const;
     void setOccupant(AlienBase* occupant);
-    virtual int getHazard();
-    virtual int getBonus();
+    AlienBase* getOccupant() const;
+    virtual int getHazard() const;
+    virtual int getBonus() const;
 };
 
 #endif
