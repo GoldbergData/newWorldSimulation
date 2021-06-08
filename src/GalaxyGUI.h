@@ -7,16 +7,19 @@ public:
     CritterGui(int windowSize, int squareSize);
     void redraw();
 };*/
+
 #include "Galaxy.h"
 #include "gwindow.h"
-using namespace std;
+using namespace sgl;
 
 class GalaxyGUI {
 private:
     GWindow* window;
-    Galaxy* world;
+    Galaxy* galaxy;
     int windowSize;
     int squareSize;
 public:
     GalaxyGUI(int windowSize, int squareSize);
-}
+    void redraw();
+    void generateTestGalaxy();
+};

@@ -17,10 +17,10 @@ private:
     //string filename; to read in our hand-made galaxy from file
     //int turns; to track movement of the planets, will probably have to 
 public:
-    Galaxy(/*filename*/);
+    Galaxy(int rows, int cols/*filename*/);
     SpaceObject* getSpaceObject(int row, int col) const;
     AlienBase* getOccupant(int row, int col) const;
-    void setObject(int row, int col, SpaceObject* object);
+    void setSpaceObject(int row, int col, SpaceObject* object);
     void setOccupant(int row, int col, AlienBase* occupant);
     int getSize() const;
 };

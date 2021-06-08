@@ -6,8 +6,9 @@ SpaceObject::SpaceObject() {
     color = "black";
 }
 
-SpaceObject::SpaceObject(string color) {
+SpaceObject::SpaceObject(string color, Movesets moveSet) {
     this->color = color;
+    this->moveSet = moveSet;
 }
 
 bool SpaceObject::isHabitable() const {

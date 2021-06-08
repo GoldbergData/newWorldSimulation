@@ -9,17 +9,14 @@
 using namespace std;
 
 //VERY TEMPORARY CONSTRUCTOR
-Galaxy::Galaxy(/*filename*/) {
+Galaxy::Galaxy(int rows, int cols/*filename*/) {
     //start with basic loop all same type of object, then file read later
     galaxy = new vector<vector<SpaceObject*>>;
-    SpaceObject* object = new Planet("brown", 0, 0); //CHANGE SOON
-    AlienBase* alien = new AlienBase();
-    ((Planet*)object)->setOccupant(alien);
-    for (int i = 0; i < 10; i++) { //CHANGE SOON
-        vector<SpaceObject*> row;
-        galaxy->push_back(row);
-        for (int j = 0; j < 10; j++) {
-            (*galaxy)[i].push_back(object);
+    for (int i = 0; i < rows; i++) { //CHANGE SOON
+        vector<SpaceObject*> newRow;
+        galaxy->push_back(newRow);
+        for (int j = 0; j < cols; j++) {
+            (*galaxy)[i].push_back(nullptr);
         }
     }
 }
@@ -29,26 +26,26 @@ SpaceObject* Galaxy::getSpaceObject(int row, int col) const {
 }
 
 AlienBase* Galaxy::getOccupant(int row, int col) const {
-    SpaceObject* object = (*galaxy)[row][col];
-    if (object->isHabitable()) {
-        return ((Planet*)object)->getOccupant();
+    SpaceObject* spaceObject = (*galaxy)[row][col];
+    if (spaceObject->isHabitable()) {
+        return ((Planet*)spaceObject)->getOccupant();
     }
     return nullptr; //CHANGE LATER
 }
 
-void Galaxy::setObject(int row, int col, SpaceObject* object) {
-    (*galaxy)[row][col] = object;
+void Galaxy::setSpaceObject(int row, int col, SpaceObject* spaceObject) {
+    (*galaxy)[row][col] = spaceObject;
 }
 
 void Galaxy::setOccupant(int row, int col, AlienBase* occupant) {
-    SpaceObject* object = (*galaxy)[row][col];
-    if (object->isHabitable()) {
-        ((Planet*)object)->setOccupant(occupant);
+    SpaceObject* spaceObject = (*galaxy)[row][col];
+    if (spaceObject->isHabitable()) {
+        ((Planet*)spaceObject)->setOccupant(occupant);
     }
 }
 
 int Galaxy::getSize() const {
-    return 10; //or 15 or 20 for better resolution planets later
+    return galaxy->size();
 }
 
 // overrides the print (<<) operator for std vectors that contain any type

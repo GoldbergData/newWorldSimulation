@@ -5,6 +5,7 @@
 
 #include "SpaceObject.h"
 #include "AlienBase.h"
+#include "Orbits.h"
 
 //header
 class Planet : public SpaceObject {
@@ -13,7 +14,7 @@ private:
     int capacity;
     int baseTemperature;
 public:
-    Planet(string color, int capacity, int baseTemperature);
+    Planet(string color, int capacity, int baseTemperature, Movesets moveSet);
     int getCapacity() const;
     int getTemperature() const;
     virtual bool isHabitable() const;

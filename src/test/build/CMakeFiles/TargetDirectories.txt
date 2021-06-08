@@ -1,3 +1,0 @@
-C:/Users/thejo/Documents/Code/C++/newWorldSimulation/src/test/build/CMakeFiles/rebuild_cache.dir
-C:/Users/thejo/Documents/Code/C++/newWorldSimulation/src/test/build/CMakeFiles/AutoComplete.dir
-C:/Users/thejo/Documents/Code/C++/newWorldSimulation/src/test/build/CMakeFiles/edit_cache.dir

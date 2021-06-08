@@ -5,7 +5,9 @@
 using namespace std;
 
 //header
-Planet::Planet(string color, int capacity, int baseTemperature) : SpaceObject(color) {
+Planet::Planet(string color, int capacity, int baseTemperature, Movesets moveSet) :
+SpaceObject(color, moveSet) {
+    occupant = nullptr;
     this->capacity = capacity;
     this->baseTemperature = baseTemperature;
 }
