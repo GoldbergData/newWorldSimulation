@@ -11,11 +11,12 @@ using namespace std;
 class SpaceObject {
 private:
     string color;
-    Movesets moveSet;
+    Movesets moveset;
 public:
     SpaceObject();
-    SpaceObject(string color, Movesets moveSet);
+    SpaceObject(string color, Movesets moveset);
     virtual bool isHabitable() const;
+    Movesets getMoveset() const;
     string getColor() const;
     string toString() const;
 };

@@ -10,9 +10,13 @@ using namespace std;
 class AlienBase {
 private:
     string name;
+    long population;
 public:
     AlienBase();
-    string getName() const; 
-    string toString() const;
+    string getName() const;
+    long getPopulation() const;
+    long getIncrease() const;
+    void setPopulation(long newPopulation);
+
 };
 #endif

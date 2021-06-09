@@ -9,14 +9,18 @@
 using namespace std;
 
 //VERY TEMPORARY CONSTRUCTOR
-Galaxy::Galaxy(int rows, int cols/*filename*/) {
+Galaxy::Galaxy(int rows, int cols) {
     //start with basic loop all same type of object, then file read later
     galaxy = new vector<vector<SpaceObject*>>;
+    spaceships = new vector<vector<Spaceship*>>;
     for (int i = 0; i < rows; i++) { //CHANGE SOON
-        vector<SpaceObject*> newRow;
-        galaxy->push_back(newRow);
+        vector<SpaceObject*> newRowSpaceObjects;
+        vector<Spaceship*> newRowShips;
+        spaceships->push_back(newRowShips);
+        galaxy->push_back(newRowSpaceObjects);
         for (int j = 0; j < cols; j++) {
             (*galaxy)[i].push_back(nullptr);
+            (*spaceships)[i].push_back(nullptr);
         }
     }
 }
@@ -33,6 +37,10 @@ AlienBase* Galaxy::getOccupant(int row, int col) const {
     return nullptr; //CHANGE LATER
 }
 
+Spaceship* Galaxy::getSpaceship(int row, int col) const {
+     return (*spaceships)[row][col];
+}
+
 void Galaxy::setSpaceObject(int row, int col, SpaceObject* spaceObject) {
     (*galaxy)[row][col] = spaceObject;
 }
@@ -42,6 +50,10 @@ void Galaxy::setOccupant(int row, int col, AlienBase* occupant) {
     if (spaceObject->isHabitable()) {
         ((Planet*)spaceObject)->setOccupant(occupant);
     }
+}
+
+void Galaxy::setSpaceship(int row, int col, Spaceship* spaceship) {
+    (*spaceships)[row][col] = spaceship;
 }
 
 int Galaxy::getSize() const {
@@ -97,7 +109,7 @@ string printHelper(SpaceObject* spaceObject, bool fencepost) {
     string temp = "";
     temp += ("(" + spaceObject->toString());
     if (spaceObject->isHabitable()) {;
-        temp += (":" + ((Planet*)spaceObject)->getOccupant()->toString() + ")");
+        temp += (":" + ((Planet*)spaceObject)->getOccupant()->getName() + ")");
         if (!fencepost) {
             temp += ", ";
         }

@@ -1,6 +1,7 @@
 #include "Orbits.h"
 
-Moves getOrbit(int currentTurn, Movesets moveSet) {
+Moves getMove(long currentTurn, Movesets moveSet /*int offset*/) {
+    //currentTurn += offset; //to start somewhere other than top right corner
     if (moveSet == STATIONARY) {
         return CENTER;
     } else if (moveSet == CLOSE) {

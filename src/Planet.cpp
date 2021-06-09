@@ -5,14 +5,14 @@
 using namespace std;
 
 //header
-Planet::Planet(string color, int capacity, int baseTemperature, Movesets moveSet) :
-SpaceObject(color, moveSet) {
+Planet::Planet(string color, long capacity, int baseTemperature, Movesets moveset) :
+SpaceObject(color, moveset) {
     occupant = nullptr;
     this->capacity = capacity;
     this->baseTemperature = baseTemperature;
 }
 
-int Planet::getCapacity() const {
+long Planet::getCapacity() const {
     return capacity;
 }
 

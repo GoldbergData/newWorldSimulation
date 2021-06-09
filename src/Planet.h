@@ -11,11 +11,11 @@
 class Planet : public SpaceObject {
 private:
     AlienBase* occupant;
-    int capacity;
+    long capacity;
     int baseTemperature;
 public:
-    Planet(string color, int capacity, int baseTemperature, Movesets moveSet);
-    int getCapacity() const;
+    Planet(string color, long capacity, int baseTemperature, Movesets moveset);
+    long getCapacity() const;
     int getTemperature() const;
     virtual bool isHabitable() const;
     void setOccupant(AlienBase* occupant);

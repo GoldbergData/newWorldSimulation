@@ -5,13 +5,22 @@
 using namespace std;
 
 AlienBase::AlienBase() {
-    name = "TEMP NAME";
+    name = "AlienBase";
+    population = 10000;
 }
 
 string AlienBase::getName() const {
     return name;
 }
 
-string AlienBase::toString() const {
-    return "AlienBase";
+long AlienBase::getPopulation() const {
+    return population;
+}
+
+long AlienBase::getIncrease() const {
+    return population / 10;
+}
+
+void AlienBase::setPopulation(long newPopulation) {
+    population = newPopulation;
 }

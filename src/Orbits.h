@@ -6,11 +6,11 @@
 using namespace std;
 
 enum Movesets{STATIONARY, CLOSE, MEDIUM};
-enum Moves{CENTER, NORTH, EAST, SOUTH, WEST};
+enum Moves{CENTER, NORTH, EAST, SOUTH, WEST, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST};
 const vector<Moves> circle = {SOUTH, WEST, NORTH, EAST};
-//Moves getMove(int currentTurn, Movesets moveSet);
+//const vector<Moves> circle = {WEST, SOUTH, EAST, NORTH};
 
 //CURRENT INITIAL SPOTS FOR ALL ORBITS - TOP RIGHT CORNER, CLOCKWISE
-Moves getOrbit(int currentTurn, Movesets moveSet);
+Moves getMove(long currentTurn, Movesets moveSet);
 
 #endif
