@@ -23,10 +23,4 @@ public:
     GalaxyGUI(int windowSize, int squareSize);
     void update();
     void redraw();
-    void spawnShip(int row, int col, AlienBase* occupant, Galaxy* galaxy);
-    void moveShips();
-    bool updatePopulation(SpaceObject* spaceObject, AlienBase* occupant);
-    void moveSpaceObject(int row, int col, SpaceObject* spaceObject, Galaxy* newGalaxy);
-    void generateTestGalaxy();
-    void generateGalaxyFile(string filename);
 };

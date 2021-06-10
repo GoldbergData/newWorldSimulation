@@ -11,10 +11,8 @@ int main() {
     GalaxyGUI testGUI(800, 40);
     testGUI.redraw();
     //testGUI.generateTestGalaxy();
-    testGUI.generateGalaxyFile("TestGalaxy.txt");
-    testGUI.redraw();
     for (int i = 0; i < 100; i++) {
-        testGUI.update();
+        testGUI.redraw();
     }
     return 0;
 }

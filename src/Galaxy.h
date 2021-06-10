@@ -16,7 +16,10 @@ private:
     vector<vector<SpaceObject*>>* galaxy;
     vector<vector<Spaceship*>>* spaceships;
 public:
-    Galaxy(int rows, int cols);
+    Galaxy(int rows, int cols, string filename);
+    vector<vector<SpaceObject*>>* generateEmptyGalaxy(int rows, int cols);
+    vector<vector<Spaceship*>>* generateEmptyShips(int rows, int cols);
+    void generateGalaxyFile(string filename);
     SpaceObject* getSpaceObject(int row, int col) const;
     AlienBase* getOccupant(int row, int col) const;
     Spaceship* getSpaceship(int row, int col) const;
@@ -24,6 +27,13 @@ public:
     void setOccupant(int row, int col, AlienBase* occupant);
     void setSpaceship(int row, int col, Spaceship* spaceship);
     int getSize() const;
+    void update(long currentTurn);
+    void spawnShip(int row, int col, AlienBase* occupant,
+            vector<vector<Spaceship*>>* newSpaceships);
+    void moveShips();
+    bool updatePopulation(SpaceObject* spaceObject, AlienBase* occupant);
+    void moveSpaceObject(long turn, int row, int col, SpaceObject* spaceObject,
+            vector<vector<SpaceObject*>>* newGalaxy);
 };
 string printHelper(SpaceObject* spaceObject, bool fencepost);
 
