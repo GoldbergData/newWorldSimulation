@@ -10,14 +10,7 @@
 #include "SpaceObject.h"
 #include "Spaceship.h"
 
-
-#include <ctime>
-#include <ratio>
-#include <chrono>
-using namespace std::chrono;
-
 using namespace sgl;
-using namespace std;
 
 GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     window = new GWindow();
@@ -39,7 +32,6 @@ void GalaxyGUI::update() {
 
 void GalaxyGUI::redraw() {
     update();
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
     currentTurn++;
     window->clearCanvasPixels();
     for (int i = 0; i < galaxy->getSize(); i++) {
@@ -66,15 +58,7 @@ void GalaxyGUI::redraw() {
             }
         }
     }
-    high_resolution_clock::time_point t3 = high_resolution_clock::now();
     window->repaint();
-    high_resolution_clock::time_point t4 = high_resolution_clock::now();
-    /*duration<double> time1 = t2 - t1;
-    duration<double> time2 = t3 - t2;
-    duration<double> time3 = t4 - t3;
-    cout << "Update: " << time1.count() << endl;
-    cout << "Process and print: " << time2.count() << endl;
-    cout << "Repaint: " << time3.count() << endl;*/
 }
 
 

@@ -73,6 +73,8 @@ void Galaxy::generateGalaxyFile(string filename) {
         AlienBase* alienBase;
         if (alienType == "AlienBase") {
             alienBase = new AlienBase();
+        } else {
+            alienBase = nullptr;
         }
         SpaceObject* spaceObject = (*galaxy)[row][col];
         ((Planet*)spaceObject)->setOccupant(alienBase);

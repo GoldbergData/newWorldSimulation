@@ -11,7 +11,7 @@ int main() {
     GalaxyGUI testGUI(800, 40);
     testGUI.redraw();
     //testGUI.generateTestGalaxy();
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 500; i++) {
         testGUI.redraw();
     }
     return 0;
