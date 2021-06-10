@@ -17,8 +17,8 @@ public:
     SpaceObject(string color, Movesets moveset);
     virtual bool isHabitable() const;
     Movesets getMoveset() const;
-    string getColor() const;
-    string toString() const;
+    virtual string getColor() const;
+    virtual string getName() const;
 };
 
 #endif

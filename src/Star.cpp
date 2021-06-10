@@ -8,6 +8,10 @@ Star::Star() : SpaceObject("yellow", STATIONARY) { //color probably on a star ty
     temperature = 9000; //CAN UPDATE LATER
 }
 
-int Star::getTemperature() const{
+int Star::getTemperature() const {
     return temperature;
+}
+
+string Star::getName() const {
+    return "Star";
 }

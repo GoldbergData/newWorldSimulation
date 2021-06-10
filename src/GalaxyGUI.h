@@ -10,7 +10,10 @@ public:
 
 #include "Galaxy.h"
 #include "gwindow.h"
+#include <string>
 using namespace sgl;
+
+const vector<string> moveStrings = {"C", "N", "E", "S", "W", "NE", "NW", "SE", "SW"};
 
 class GalaxyGUI {
 private:
@@ -21,6 +24,6 @@ private:
     long currentTurn;
 public:
     GalaxyGUI(int windowSize, int squareSize);
-    void update();
     void redraw();
+    string getImage(string name, Moves lastMove);
 };

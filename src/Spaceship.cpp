@@ -3,15 +3,19 @@
 #include "Spaceship.h"
 #include <string>
 
-Spaceship::Spaceship(string name) {
-    this->name = name;
-    move = CENTER;
+Spaceship::Spaceship(AlienBase* occupant) : SpaceObject("TEMP", RANDOM) {
+    this->occupant = occupant;
+    lastMove = NORTH;
 }
 
-string Spaceship::getName() const {
-    return name;
+AlienBase* Spaceship::getOccupant() const {
+    return occupant;
 }
 
-Moves Spaceship::getMove() const {
-    return move;
+Moves Spaceship::getLastMove() const {
+    return lastMove;
+}
+
+void Spaceship::setLastMove(Moves move) {
+    lastMove = move;
 }

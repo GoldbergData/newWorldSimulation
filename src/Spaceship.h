@@ -5,16 +5,19 @@
 
 #include <string>
 #include "Orbits.h"
+#include "SpaceObject.h"
+#include "AlienBase.h"
 using namespace std;
 
-class Spaceship {
+class Spaceship : public SpaceObject {
 private:
-    string name;
-    Moves move;
+    AlienBase* occupant;
+    Moves lastMove;
 public:
-    Spaceship(string name);
-    string getName() const;
-    Moves getMove() const;
+    Spaceship(AlienBase*);
+    AlienBase* getOccupant() const;
+    Moves getLastMove() const;
+    void setLastMove(Moves move);
 };
 
 #endif

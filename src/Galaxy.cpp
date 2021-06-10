@@ -9,6 +9,7 @@
 #include "Planet.h"
 #include "Star.h"
 #include "AlienBase.h"
+#include "Zed.h"
 using namespace std;
 
 //VERY TEMPORARY CONSTRUCTOR
@@ -30,10 +31,10 @@ vector<vector<SpaceObject*>>* Galaxy::generateEmptyGalaxy(int rows, int cols) {
     return galaxy;
 }
 
-vector<vector<Spaceship*>>* Galaxy::generateEmptyShips(int rows, int cols) {
-    vector<vector<Spaceship*>>* spaceships = new vector<vector<Spaceship*>>;
+vector<vector<SpaceObject*>>* Galaxy::generateEmptyShips(int rows, int cols) {
+    vector<vector<SpaceObject*>>* spaceships = new vector<vector<SpaceObject*>>;
     for (int i = 0; i < rows; i++) {
-        vector<Spaceship*> newRowShips;
+        vector<SpaceObject*> newRowShips;
         spaceships->push_back(newRowShips);
         for (int j = 0; j < cols; j++) {
             (*spaceships)[i].push_back(nullptr);
@@ -73,7 +74,9 @@ void Galaxy::generateGalaxyFile(string filename) {
         AlienBase* alienBase;
         if (alienType == "AlienBase") {
             alienBase = new AlienBase();
-        } else {
+        } else if (alienType == "Zed") {
+            alienBase = new Zed();
+        }else {
             alienBase = nullptr;
         }
         SpaceObject* spaceObject = (*galaxy)[row][col];
@@ -93,7 +96,7 @@ AlienBase* Galaxy::getOccupant(int row, int col) const {
     return nullptr; //CHANGE LATER
 }
 
-Spaceship* Galaxy::getSpaceship(int row, int col) const {
+SpaceObject* Galaxy::getSpaceship(int row, int col) const {
      return (*spaceships)[row][col];
 }
 
@@ -108,7 +111,7 @@ void Galaxy::setOccupant(int row, int col, AlienBase* occupant) {
     }
 }
 
-void Galaxy::setSpaceship(int row, int col, Spaceship* spaceship) {
+void Galaxy::setSpaceship(int row, int col, SpaceObject* spaceship) {
     (*spaceships)[row][col] = spaceship;
 }
 
@@ -119,14 +122,14 @@ int Galaxy::getSize() const {
 void Galaxy::update(long currentTurn) {
     int tiles = galaxy->size();
     vector<vector<SpaceObject*>>* newGalaxy = generateEmptyGalaxy(tiles, tiles);
-    vector<vector<Spaceship*>>* newSpaceships = generateEmptyShips(tiles, tiles);
+    vector<vector<SpaceObject*>>* newSpaceships = generateEmptyShips(tiles, tiles);
     for (int i = 0; i < galaxy->size(); i++) {
         for (int j = 0; j < galaxy->size(); j++) {
             //move planets
             SpaceObject* spaceObject = (*galaxy)[i][j];
-            Spaceship* spaceship = (*spaceships)[i][j];
+            SpaceObject* spaceship = (*spaceships)[i][j];
             if (spaceObject != nullptr) {
-                moveSpaceObject(currentTurn, i, j, spaceObject, newGalaxy);
+                updateMovesSpaceObject(currentTurn, i, j, spaceObject, newGalaxy);
                 //update population counts
                 if (spaceObject->isHabitable()) {
                     AlienBase* occupant = ((Planet*)spaceObject)->getOccupant();
@@ -139,8 +142,10 @@ void Galaxy::update(long currentTurn) {
                 }
             }
             if (spaceship != nullptr) {
-                //moveSpaceship
-                (*newSpaceships)[i][j] = spaceship;
+                if (spaceObject != nullptr) {
+                    interactSpaceObject(spaceObject, spaceship);
+                }
+                updateMovesShip(currentTurn, i, j, spaceship, newGalaxy, newSpaceships);
             }
         }
     }
@@ -149,13 +154,24 @@ void Galaxy::update(long currentTurn) {
 }
 
 void Galaxy::spawnShip(int row, int col, AlienBase* occupant,
-            vector<vector<Spaceship*>>* newSpaceships) {
-    Spaceship* newShip = new Spaceship(occupant->getName());
-    (*newSpaceships)[row][col] = newShip;
-}
+            vector<vector<SpaceObject*>>* newSpaceships) {
+    if (occupant->getCooldown() == 0) {
+        string alienType = occupant->getName();
+        AlienBase* colony;
+        if (alienType == "Zed") {
+            colony = new Zed();
+        } else {
+            colony = new AlienBase();
+        }
+        long colonyPopulation = occupant->getPopulation() / 4;
+        SpaceObject* newShip = new Spaceship(colony);
+        (*newSpaceships)[row][col] = newShip;
+        occupant->resetCooldown();
+        //reduce planet poulation
+        long newPopulation = occupant->getPopulation() - colonyPopulation;
+        occupant->setPopulation(newPopulation);
 
-void Galaxy::moveShips() {
-
+    }
 }
 
 bool Galaxy::updatePopulation(SpaceObject* spaceObject, AlienBase* occupant) {
@@ -174,32 +190,124 @@ bool Galaxy::updatePopulation(SpaceObject* spaceObject, AlienBase* occupant) {
         full = true;
     }
     occupant->setPopulation(newPopulation);
-    //cout << newPopulation << endl; //
+    occupant->reduceCooldown();
     return full;
 }
 
-void Galaxy::moveSpaceObject(long turn, int row, int col, SpaceObject* spaceObject,
+void Galaxy::updateMovesSpaceObject(long turn, int row, int col, SpaceObject* objectToMove,
             vector<vector<SpaceObject*>>* newGalaxy) {
-    Movesets moveset = spaceObject->getMoveset();
+    Movesets moveset = objectToMove->getMoveset();
     Moves move = getMove(turn, moveset);
-    if (move == NORTH) {
-        (*newGalaxy)[row - 1][col] = spaceObject;
-    } else if (move == NORTHEAST) {
-        (*newGalaxy)[row - 1][col + 1] = spaceObject;
-    } else if (move == EAST) {
-        (*newGalaxy)[row][col + 1] = spaceObject;
-    } else if (move == SOUTHEAST) {
-        (*newGalaxy)[row + 1][col + 1] = spaceObject;
-    } else if (move == SOUTH) {
-        (*newGalaxy)[row + 1][col] = spaceObject;
-    } else if (move == SOUTHWEST) {
-        (*newGalaxy)[row + 1][col - 1] = spaceObject;
-    } else if (move == WEST) {
-        (*newGalaxy)[row][col - 1] = spaceObject;
-    } else if (move == NORTHWEST) {
-        (*newGalaxy)[row - 1][col - 1] = spaceObject;
+    updateCoordinates(row, col, move);
+    (*newGalaxy)[row][col] = objectToMove;
+}
+
+void Galaxy::updateMovesShip(long turn, int row, int col, SpaceObject* objectToMove,
+            vector<vector<SpaceObject*>>* newGalaxy, vector<vector<SpaceObject*>>* newShips) {
+    Movesets moveset = objectToMove->getMoveset();
+    Moves move = getMove(turn, moveset);
+    updateCoordinates(row, col, move);
+    if ((*newShips)[row][col] == nullptr) {
+        (*newShips)[row][col] = objectToMove;
+        ((Spaceship*)objectToMove)->setLastMove(move);
+        SpaceObject* spaceObject = (*newGalaxy)[row][col];
+        if(spaceObject != nullptr) {
+            interactSpaceObject(spaceObject, objectToMove);
+        }
     } else {
-        (*newGalaxy)[row][col] = spaceObject;
+        SpaceObject* otherObject = (*newShips)[row][col];
+        interactShips(objectToMove, otherObject);
+    }
+}
+
+void Galaxy::updateCoordinates(int& row, int& col, Moves move) {
+    if (move == NORTH) {
+        row -= 1;
+    } else if (move == NORTHEAST) {
+        row -= 1;
+        col += 1;
+    } else if (move == EAST) {
+        col += 1;
+    } else if (move == SOUTHEAST) {
+        row += 1;
+        col += 1;
+    } else if (move == SOUTH) {
+        row += 1;
+    } else if (move == SOUTHWEST) {
+        row += 1;
+        col += 1;
+    } else if (move == WEST) {
+        col -= 1;
+    } else if (move == NORTHWEST) {
+        row -= 1;
+        col -= 1;
+    }
+    if (row == galaxy->size()) {
+        row = 0;
+    } else if (row < 0) {
+        row = galaxy->size() - 1;
+    }
+    if (col == galaxy->size()) {
+        col = 0;
+    } else if (col < 0) {
+        col = galaxy->size() - 1;
+    }
+}
+
+void Galaxy::interactShips(SpaceObject* ship1, SpaceObject* ship2) {
+    string occupant1 = ((Spaceship*)ship1)->getOccupant()->getName();
+    string occupant2 = ((Spaceship*)ship2)->getOccupant()->getName();
+    if (occupant1 != occupant2) { 
+        long pop1 = ((Spaceship*)ship1)->getOccupant()->getPopulation();
+        long pop2 = ((Spaceship*)ship2)->getOccupant()->getPopulation();
+        if (pop1 == pop2) {
+            int winner = rand() % 2;
+            winner ? ship1 = nullptr : ship2 = nullptr;
+        } else if (pop1 > pop2) {
+            ship2 = nullptr;
+        } else {
+            ship1 = nullptr;
+        }
+    }
+}
+
+void Galaxy::interactSpaceObject(SpaceObject* spaceObject, SpaceObject* ship) {
+    if (spaceObject->isHabitable()) {
+        AlienBase* occupant = ((Planet*)spaceObject)->getOccupant();
+        string shipOccupant = ((Spaceship*)ship)->getOccupant()->getName();
+        if (occupant != nullptr) {
+            string planetOccupant = occupant->getName();
+            if (planetOccupant != shipOccupant) { 
+                long popPlanet = occupant->getPopulation() / 3;
+                long popShip = ((Spaceship*)ship)->getOccupant()->getPopulation();
+                double ratio = (double) popPlanet / popShip;
+                if (ratio > .95 || ratio < 1.05) {
+                    int winner = rand() % 2;
+                    if (winner) {
+                        ship = nullptr;
+                    } else {
+                        AlienBase* colonizers;
+                        if (shipOccupant == "AlienBase") {
+                            colonizers = new AlienBase();
+                        } else if (shipOccupant == "Zed") {
+                            colonizers = new Zed();
+                        }
+                        occupant = colonizers;
+                        ship = nullptr;
+                    } 
+                }
+            }
+        } else {
+            AlienBase* colonizers;
+            if (shipOccupant == "AlienBase") {
+                colonizers = new AlienBase();
+            } else if (shipOccupant == "Zed") {
+                colonizers = new Zed();
+            }
+            occupant = colonizers;
+            ship = nullptr;
+        }
+        
     }
 }
 
@@ -250,7 +358,7 @@ ostream& operator <<(ostream& out, const Galaxy& list) {
 
 string printHelper(SpaceObject* spaceObject, bool fencepost) {
     string temp = "";
-    temp += ("(" + spaceObject->toString());
+    temp += ("(" + spaceObject->getName());
     if (spaceObject->isHabitable()) {;
         temp += (":" + ((Planet*)spaceObject)->getOccupant()->getName() + ")");
         if (!fencepost) {

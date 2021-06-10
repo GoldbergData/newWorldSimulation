@@ -11,12 +11,16 @@ class AlienBase {
 private:
     string name;
     long population;
+    int cooldown;
 public:
     AlienBase();
-    string getName() const;
-    long getPopulation() const;
-    long getIncrease() const;
-    void setPopulation(long newPopulation);
-
+    AlienBase(string name);
+    virtual string getName() const;
+    virtual long getPopulation() const;
+    virtual long getIncrease() const;
+    virtual int getCooldown() const;
+    virtual void setPopulation(long newPopulation);
+    virtual void reduceCooldown();
+    virtual void resetCooldown();
 };
 #endif

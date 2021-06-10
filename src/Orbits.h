@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-enum Movesets{STATIONARY, CLOSE, MEDIUM};
+enum Movesets{STATIONARY, CLOSE, MEDIUM, RANDOM};
 enum Moves{CENTER, NORTH, EAST, SOUTH, WEST, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST};
 const vector<Moves> circle = {SOUTH, WEST, NORTH, EAST};
 //const vector<Moves> circle = {WEST, SOUTH, EAST, NORTH};

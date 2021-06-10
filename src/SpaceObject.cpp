@@ -24,6 +24,6 @@ string SpaceObject::getColor() const {
     return color;
 }
 
-string SpaceObject::toString() const {
+string SpaceObject::getName() const {
     return "SpaceObject";
 }

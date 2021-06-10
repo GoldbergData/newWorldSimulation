@@ -13,6 +13,7 @@ private:
 public:
     Star();
     int getTemperature() const;
+    virtual string getName() const;
 };
 
 #endif
