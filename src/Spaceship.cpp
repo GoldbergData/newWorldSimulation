@@ -3,7 +3,7 @@
 #include "Spaceship.h"
 #include <string>
 
-Spaceship::Spaceship(AlienBase* occupant) : SpaceObject("TEMP", RANDOM) {
+Spaceship::Spaceship(AlienBase* occupant) : SpaceObject(RANDOM) {
     this->occupant = occupant;
     lastMove = NORTH;
 }

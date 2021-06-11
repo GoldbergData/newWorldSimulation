@@ -14,7 +14,7 @@ private:
     long capacity;
     int baseTemperature;
 public:
-    Planet(string color, long capacity, int baseTemperature, Movesets moveset);
+    Planet(Movesets moveset);
     long getCapacity() const;
     int getTemperature() const;
     virtual bool isHabitable() const;
@@ -22,6 +22,7 @@ public:
     AlienBase* getOccupant() const;
     virtual int getHazard() const;
     virtual int getBonus() const;
+    virtual string getName() const;
 };
 
 #endif

@@ -3,12 +3,10 @@
 #include "SpaceObject.h"
 
 SpaceObject::SpaceObject() {
-    color = "black";
     moveset = STATIONARY;
 }
 
-SpaceObject::SpaceObject(string color, Movesets moveset) {
-    this->color = color;
+SpaceObject::SpaceObject(Movesets moveset) {
     this->moveset = moveset;
 }
 
@@ -18,10 +16,6 @@ bool SpaceObject::isHabitable() const {
 
 Movesets SpaceObject::getMoveset() const {
     return moveset;
-}
-
-string SpaceObject::getColor() const {
-    return color;
 }
 
 string SpaceObject::getName() const {

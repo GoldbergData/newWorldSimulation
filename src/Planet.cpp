@@ -5,11 +5,10 @@
 using namespace std;
 
 //header
-Planet::Planet(string color, long capacity, int baseTemperature, Movesets moveset) :
-SpaceObject(color, moveset) {
+Planet::Planet(Movesets moveset) : SpaceObject(moveset) {
     occupant = nullptr;
-    this->capacity = capacity;
-    this->baseTemperature = baseTemperature;
+    capacity = 1000000;
+    baseTemperature = 0;
 }
 
 long Planet::getCapacity() const {
@@ -38,4 +37,8 @@ int Planet::getHazard() const { //CAN SET TRIGGER FREQUENCY/CHANCE LATER
 
 int Planet::getBonus() const {
     return 0;
+}
+
+string Planet::getName() const {
+    return "Planet";
 }

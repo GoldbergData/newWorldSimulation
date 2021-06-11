@@ -9,6 +9,7 @@
 #include "Galaxy.h"
 #include "SpaceObject.h"
 #include "Spaceship.h"
+#include "Explosion.h"
 
 using namespace sgl;
 
@@ -24,7 +25,7 @@ GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     this->windowSize = windowSize;
     this->squareSize = squareSize;
     currentTurn = 0;
-    window->setTimerListener(100, [this] {
+    window->setTimerListener(300, [this] {
         // note that we use this lamdba function (basically an anonymous function) 
         // so that we can call our member function. We can call a non-member function 
         // by just listing the name as we did in our first version. However, that
@@ -39,16 +40,24 @@ void GalaxyGUI::redraw() {
     galaxy->update(currentTurn);
     currentTurn++;
     window->clearCanvasPixels();
+    window->drawImage("Background2.png", 0, 0);
+    //Get coordinates
     for (int i = 0; i < galaxy->getSize(); i++) {
         for (int j = 0; j < galaxy->getSize(); j++) {
+            //Grab SpaceObject and Spaceship
             SpaceObject* spaceObject = galaxy->getSpaceObject(i, j);
             SpaceObject* spaceship = galaxy->getSpaceship(i, j);
+            SpaceObject* explosion = galaxy->getExplosion(i, j);
+            //Draw SpaceObject if one exists
             if (spaceObject != nullptr) {
+                //Grab object type as string to check
                 string type = spaceObject->getName();
                 if (type == "Star") {
-                    window->drawImage("Star.png", j * squareSize, i * squareSize);   
+                    string filename = ((Star*)spaceObject)->getFilename();
+                    window->drawImage(filename, j * squareSize, i * squareSize);
                 } else {
-                    window->drawImage("Planet.png", j * squareSize + 5, i * squareSize + 5); 
+                    string filename = type + ".png";
+                    window->drawImage(filename, j * squareSize + 5, i * squareSize + 5); 
                     AlienBase* occupant = galaxy->getOccupant(i, j);
                     if (occupant != nullptr) {
                         string name = galaxy->getOccupant(i, j)->getName();
@@ -57,13 +66,26 @@ void GalaxyGUI::redraw() {
                     }
                 }
             }
-            //super temp test
+            //Draw Explosion if one exists
+            if (explosion != nullptr) {
+                int stage = ((Explosion*)explosion)->getStage();
+                string name = ((Explosion*)explosion)->getName();
+                if (stage > 0) {
+                    string image = name + to_string(stage) + ".png";
+                    ((Explosion*)explosion)->decrementStage();
+                    window->drawImage(image, j * squareSize, i * squareSize);
+                } else {
+                    spaceObject = nullptr;
+                }
+            }
+            //Draw Spaceship if one exists
             if (spaceship != nullptr) {
                 string name = ((Spaceship*)spaceship)->getOccupant()->getName();
                 Moves lastMove = ((Spaceship*)spaceship)->getLastMove();
                 string imageFile = getImage(name, lastMove);
                 window->drawImage(imageFile, j * squareSize + 5, i * squareSize + 5); // x = col, y = row
             }
+            
         }
     }
     window->repaint();

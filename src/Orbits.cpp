@@ -12,7 +12,13 @@ Moves getMove(long currentTurn, Movesets moveSet /*int offset*/) {
         return circle[currentTurn / 4 % circle.size()];
     } else if (moveSet == RANDOM) {
         return circle[rand() % circle.size()];
-    } else {
+    } else if (moveSet == CLOSECC) {
+        return circleCC[currentTurn / 2 % circle.size()];
+    } else if (moveSet == MEDIUMSLOW) {
+        return (currentTurn % 2 == 0) ? CENTER : (circle[currentTurn / 8 % circle.size()]);
+    } else if (moveSet == FAR) {
+        return circle[currentTurn / 6 % circle.size()];
+    }else {
         return CENTER;
     }
 }

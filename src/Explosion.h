@@ -8,11 +8,12 @@
 
 class Explosion : public SpaceObject {
 private:
-    string image;
+    int stage;
 public:
     Explosion();
     virtual string getName() const;
-    void setImage(string filename);
+    int getStage() const;
+    void decrementStage();
 };
 
 #endif

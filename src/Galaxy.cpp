@@ -10,37 +10,28 @@
 #include "Star.h"
 #include "AlienBase.h"
 #include "Zed.h"
+#include "Explosion.h"
+#include "ToxicWasteland.h"
 using namespace std;
 
 //VERY TEMPORARY CONSTRUCTOR
 Galaxy::Galaxy(int rows, int cols, string filename) {
-    galaxy = generateEmptyGalaxy(rows, cols);
-    spaceships = generateEmptyShips(rows, cols);
+    galaxy = generateEmptyGrid(rows, cols);
+    spaceships = generateEmptyGrid(rows, cols);
+    explosions = generateEmptyGrid(rows, cols);
     generateGalaxyFile(filename);
 }
 
-vector<vector<SpaceObject*>>* Galaxy::generateEmptyGalaxy(int rows, int cols) {
-    vector<vector<SpaceObject*>>* galaxy = new vector<vector<SpaceObject*>>;
+vector<vector<SpaceObject*>>* Galaxy::generateEmptyGrid(int rows, int cols) {
+    vector<vector<SpaceObject*>>* grid = new vector<vector<SpaceObject*>>;
     for (int i = 0; i < rows; i++) {
         vector<SpaceObject*> newRowSpaceObjects;
-        galaxy->push_back(newRowSpaceObjects);
+        grid->push_back(newRowSpaceObjects);
         for (int j = 0; j < cols; j++) {
-            (*galaxy)[i].push_back(nullptr);
+            (*grid)[i].push_back(nullptr);
         }
     }
-    return galaxy;
-}
-
-vector<vector<SpaceObject*>>* Galaxy::generateEmptyShips(int rows, int cols) {
-    vector<vector<SpaceObject*>>* spaceships = new vector<vector<SpaceObject*>>;
-    for (int i = 0; i < rows; i++) {
-        vector<SpaceObject*> newRowShips;
-        spaceships->push_back(newRowShips);
-        for (int j = 0; j < cols; j++) {
-            (*spaceships)[i].push_back(nullptr);
-        }
-    }
-    return spaceships;
+    return grid;
 }
 
 //update for aliens
@@ -51,7 +42,6 @@ void Galaxy::generateGalaxyFile(string filename) {
     int alienCount; read >> alienCount;
     for (int i = 0; i < spaceObjectCount; i++) {
         string type; read >> type;
-        string color; read >> color;
         string temp;
         read >> temp; int row = 0; row = stoi(temp);
         read >> temp; int col = 0; col = stoi(temp);
@@ -60,7 +50,9 @@ void Galaxy::generateGalaxyFile(string filename) {
         if (type == "Star") {
             spaceObject = new Star();
         } else if (type == "Planet") {
-            spaceObject = new Planet(color, 1000000, 0, Movesets(moveset));
+            spaceObject = new Planet(Movesets(moveset));
+        } else if (type == "ToxicWasteland") {
+            spaceObject = new ToxicWasteland(Movesets(moveset));
         } else {
             spaceObject = nullptr;
         }
@@ -100,6 +92,10 @@ SpaceObject* Galaxy::getSpaceship(int row, int col) const {
      return (*spaceships)[row][col];
 }
 
+SpaceObject* Galaxy::getExplosion(int row, int col) const {
+     return (*explosions)[row][col];
+}
+
 void Galaxy::setSpaceObject(int row, int col, SpaceObject* spaceObject) {
     (*galaxy)[row][col] = spaceObject;
 }
@@ -120,14 +116,16 @@ int Galaxy::getSize() const {
 }
 
 void Galaxy::update(long currentTurn) {
-    int tiles = galaxy->size();
-    vector<vector<SpaceObject*>>* newGalaxy = generateEmptyGalaxy(tiles, tiles);
-    vector<vector<SpaceObject*>>* newSpaceships = generateEmptyShips(tiles, tiles);
+    int size = galaxy->size();
+    vector<vector<SpaceObject*>>* newGalaxy = generateEmptyGrid(size, size);
+    vector<vector<SpaceObject*>>* newSpaceships = generateEmptyGrid(size, size);
+    vector<vector<SpaceObject*>>* newExplosions = generateEmptyGrid(size, size);
     for (int i = 0; i < galaxy->size(); i++) {
         for (int j = 0; j < galaxy->size(); j++) {
             //move planets
             SpaceObject* spaceObject = (*galaxy)[i][j];
             SpaceObject* spaceship = (*spaceships)[i][j];
+            SpaceObject* explosion = (*explosions)[i][j];
             if (spaceObject != nullptr) {
                 updateMovesSpaceObject(currentTurn, i, j, spaceObject, newGalaxy);
                 //update population counts
@@ -145,12 +143,17 @@ void Galaxy::update(long currentTurn) {
                 if (spaceObject != nullptr) {
                     interactSpaceObject(spaceObject, spaceship);
                 }
-                updateMovesShip(currentTurn, i, j, spaceship, newGalaxy, newSpaceships);
+                updateMovesShip(currentTurn, i, j, spaceship, newGalaxy, newSpaceships,
+                        newExplosions);
+            }
+            if (explosion != nullptr) {
+                (*newExplosions)[i][j] = explosion;
             }
         }
     }
     galaxy = newGalaxy;
     spaceships = newSpaceships;
+    explosions = newExplosions;
 }
 
 void Galaxy::spawnShip(int row, int col, AlienBase* occupant,
@@ -203,21 +206,55 @@ void Galaxy::updateMovesSpaceObject(long turn, int row, int col, SpaceObject* ob
 }
 
 void Galaxy::updateMovesShip(long turn, int row, int col, SpaceObject* objectToMove,
-            vector<vector<SpaceObject*>>* newGalaxy, vector<vector<SpaceObject*>>* newShips) {
+            vector<vector<SpaceObject*>>* newGalaxy, vector<vector<SpaceObject*>>* newShips,
+            vector<vector<SpaceObject*>>* newExplosions) {
     Movesets moveset = objectToMove->getMoveset();
     Moves move = getMove(turn, moveset);
+    //Changes coordinates to where the ship wants to move
     updateCoordinates(row, col, move);
+    //Moves ship to new location if empty.
+    int oldRow = row;
+    int oldCol = col;
     if ((*newShips)[row][col] == nullptr) {
         (*newShips)[row][col] = objectToMove;
         ((Spaceship*)objectToMove)->setLastMove(move);
+        //Checks for planet at new location and interacts if one exists
         SpaceObject* spaceObject = (*newGalaxy)[row][col];
         if(spaceObject != nullptr) {
-            interactSpaceObject(spaceObject, objectToMove);
+            int winner = interactSpaceObject(spaceObject, objectToMove);
+            if (winner == 1) {
+                SpaceObject* newExplosion = new Explosion();
+                (*newExplosions)[oldRow][oldCol] = newExplosion;
+            } else if (winner == 2) {
+                string alienType = ((Spaceship*)objectToMove)->getOccupant()->getName();
+                AlienBase* newOccupant = createColony(alienType);
+                ((Planet*)spaceObject)->setOccupant(newOccupant);
+            }
         }
+    //Interacts with other ship if space is not empty
     } else {
         SpaceObject* otherObject = (*newShips)[row][col];
-        interactShips(objectToMove, otherObject);
+        int winner = interactShips(objectToMove, otherObject);
+        SpaceObject* newExplosion = new Explosion();        //free memory?
+        if (winner == 1) {
+            (*newShips)[oldRow][oldCol] = objectToMove;
+            (*newExplosions)[row][col] = newExplosion;
+        } else if (winner == 2) {
+            (*newExplosions)[oldRow][oldCol] = newExplosion;
+            (*newShips)[row][col] = otherObject;
+        }
     }
+}
+
+AlienBase* Galaxy::createColony(string alienType) {
+    AlienBase* newColony;
+    cout << alienType << endl; //DEBUG
+    if (alienType == "Zed") {
+        newColony = new Zed();
+    } else {
+        newColony = new AlienBase();
+    }
+    return newColony;
 }
 
 void Galaxy::updateCoordinates(int& row, int& col, Moves move) {
@@ -254,61 +291,57 @@ void Galaxy::updateCoordinates(int& row, int& col, Moves move) {
     }
 }
 
-void Galaxy::interactShips(SpaceObject* ship1, SpaceObject* ship2) {
+//0 = no fight, 1 = ship1 wins, 2 = ship2 wins
+int Galaxy::interactShips(SpaceObject* ship1, SpaceObject* ship2) {
+    //Checks if occupants belong to different factions
     string occupant1 = ((Spaceship*)ship1)->getOccupant()->getName();
     string occupant2 = ((Spaceship*)ship2)->getOccupant()->getName();
     if (occupant1 != occupant2) { 
+        //Determine winner of the fight if different factions
         long pop1 = ((Spaceship*)ship1)->getOccupant()->getPopulation();
         long pop2 = ((Spaceship*)ship2)->getOccupant()->getPopulation();
         if (pop1 == pop2) {
             int winner = rand() % 2;
-            winner ? ship1 = nullptr : ship2 = nullptr;
+            if (winner) {
+                return 2;
+            } else {
+                return 1;
+            }
         } else if (pop1 > pop2) {
-            ship2 = nullptr;
+            return 1;
         } else {
-            ship1 = nullptr;
+            return 2;
         }
     }
+    return 0;
 }
 
-void Galaxy::interactSpaceObject(SpaceObject* spaceObject, SpaceObject* ship) {
+//0 if no action, 1 if ship destroyed, 2 if colonize
+int Galaxy::interactSpaceObject(SpaceObject* spaceObject, SpaceObject* ship) {
+    //Check for planet
     if (spaceObject->isHabitable()) {
         AlienBase* occupant = ((Planet*)spaceObject)->getOccupant();
         string shipOccupant = ((Spaceship*)ship)->getOccupant()->getName();
+        //Check if planet is inhabited
         if (occupant != nullptr) {
             string planetOccupant = occupant->getName();
+            //Check if not friendly
             if (planetOccupant != shipOccupant) { 
                 long popPlanet = occupant->getPopulation() / 3;
                 long popShip = ((Spaceship*)ship)->getOccupant()->getPopulation();
                 double ratio = (double) popPlanet / popShip;
                 if (ratio > .95 || ratio < 1.05) {
                     int winner = rand() % 2;
-                    if (winner) {
-                        ship = nullptr;
-                    } else {
-                        AlienBase* colonizers;
-                        if (shipOccupant == "AlienBase") {
-                            colonizers = new AlienBase();
-                        } else if (shipOccupant == "Zed") {
-                            colonizers = new Zed();
-                        }
-                        occupant = colonizers;
-                        ship = nullptr;
-                    } 
+                    return winner ? 1 : 2;
                 }
             }
+        //If planet is not inhabited
         } else {
-            AlienBase* colonizers;
-            if (shipOccupant == "AlienBase") {
-                colonizers = new AlienBase();
-            } else if (shipOccupant == "Zed") {
-                colonizers = new Zed();
-            }
-            occupant = colonizers;
-            ship = nullptr;
+            return 2;
         }
         
     }
+    return 0;
 }
 
 // overrides the print (<<) operator for std vectors that contain any type

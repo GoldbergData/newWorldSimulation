@@ -1,13 +1,18 @@
 #include "Explosion.h"
+#include <iostream>
 
 Explosion::Explosion() {
-    image = "ExplosionBig";
+    stage = 9;
 }
 
 string Explosion::getName() const {
     return "Explosion";
 }
 
-void Explosion::setImage(string filename) {
-    image = filename;
+int Explosion::getStage() const {
+    return stage / 3;
+}
+
+void Explosion::decrementStage() {
+    stage--;
 }
