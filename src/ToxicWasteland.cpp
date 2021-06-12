@@ -6,7 +6,7 @@ using namespace std;
 ToxicWasteland::ToxicWasteland(Movesets moveset) : Planet(moveset) {}
 
 int ToxicWasteland::getHazard() const {
-    return 20000;
+    return rand() % 500;
 }
 
 string ToxicWasteland::getName() const {
