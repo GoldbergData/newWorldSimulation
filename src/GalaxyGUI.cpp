@@ -33,11 +33,12 @@ GButton* gbStop;
 GButton* gbReset;
 GChooser* gcMapSelect;
 GLabel* glInstructions;
+GLabel* glBackgrounds;
 
 GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     //set GWindow
     window = new GWindow();
-    window->setCanvasSize(windowSize + 100, windowSize);  //offset for buttons
+    window->setCanvasSize(windowSize + 120, windowSize);  //offset for buttons
     window->setLocation(300, 100);
     window->setBackground("black");   //background color for GUI buttons area
     window->setExitOnClose(true);
@@ -63,9 +64,13 @@ void GalaxyGUI::setMapFile() {
 
 void GalaxyGUI::checkImage() {
     if (grbBackground1->isSelected()) {
-        setImage("Background2.png");
-    } else {
         setImage("Background1.png");
+    } else if (grbBackground2->isSelected()) {
+        setImage("Background2.png");
+    } else if (grbBackground3->isSelected()) {
+        setImage("Background3.png");
+    } else {
+        setImage("Background4.png");
     }
 }
 
@@ -131,11 +136,16 @@ void GalaxyGUI::createSingleRadio(string text, GRadioButton** nameOut) {
  }
 
 void GalaxyGUI::createRadioButtons() {
-    createSingleRadio("Dark Void", &grbBackground1);
+    //label
+    glBackgrounds = new GLabel("Background:");
+    glBackgrounds->setColor("white");
+    window->addToRegion(glBackgrounds, "East");
+    //buttons
+    createSingleRadio("Blue Mist", &grbBackground1);
     grbBackground1->setSelected(true);
-    createSingleRadio("Blue Haze", &grbBackground2);
-    createSingleRadio("unfinished", &grbBackground3);
-    createSingleRadio("unfinished", &grbBackground4);
+    createSingleRadio("Dark Void", &grbBackground2);
+    createSingleRadio("Dim Starlight", &grbBackground3);
+    createSingleRadio("Purple Haze", &grbBackground3);
     //checks for radio buttons being changed
     window->setTimerListener(200, [this] {
         this->checkImage();
@@ -144,7 +154,7 @@ void GalaxyGUI::createRadioButtons() {
 
 void GalaxyGUI::createMapChooser() {
     gcMapSelect = new GChooser(mapFiles);
-    glInstructions = new GLabel("Select map to begin.");
+    glInstructions = new GLabel("Select map to begin:");
     glInstructions->setColor("white");
     window->addToRegion(glInstructions, "East");
     window->addToRegion(gcMapSelect, "East");
@@ -191,9 +201,16 @@ void GalaxyGUI::drawSpaceObject(SpaceObject* spaceObject, int row, int col) {
         window->drawImage(filename, col * squareSize + 5, row * squareSize + 5); 
         AlienBase* occupant = galaxy->getOccupant(row, col);
         if (occupant != nullptr) {
-            string name = galaxy->getOccupant(row, col)->getName();
+            string name = occupant->getName();
+            long population = occupant->getPopulation();
+            long populationCap = ((Planet*)spaceObject)->getCapacity();
+            int rawPercent = (100 * population) / populationCap;
+            int middle = squareSize / 2;
+            string percent = to_string(rawPercent) + "%";
             window->setColor("white");
+            window->drawString(percent, col * squareSize + middle, row * squareSize + middle + 5);
             window->drawString(name.substr(0 , 1), col * squareSize, row * squareSize);
+
         }
     }
 }
@@ -202,7 +219,7 @@ void GalaxyGUI::drawSpaceship(SpaceObject* spaceship, int row, int col) {
     string name = ((Spaceship*)spaceship)->getOccupant()->getName();
     Moves lastMove = ((Spaceship*)spaceship)->getLastMove();
     string imageFile = getShipImage(name, lastMove);
-    window->drawImage(imageFile, col * squareSize + 5, row * squareSize + 5);
+    window->drawImage(imageFile, col * squareSize, row * squareSize);
 }
 
 void GalaxyGUI::drawExplosion(SpaceObject* explosion, int row, int col) {

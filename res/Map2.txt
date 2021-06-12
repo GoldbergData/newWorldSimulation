@@ -1,0 +1,33 @@
+20
+4
+
+Star 10 10 0
+IceWorld 9 11 1
+ToxicWasteland 8 12 2
+RockSlide 7 13 6
+
+Star 2 2 0
+PurpleGas 1 3 4
+Planet 0 4 5
+
+Star 8 3 0
+ToxicWasteland 7 4 1
+RockSlide 6 5 5
+Planet 5 6 6
+
+Star 2 9 0
+IceWorld 1 10 1
+Greenhouse 0 11 2
+
+Star 16 9 0
+RockSlide 15 10 1
+Planet 14 11 2
+
+Star 10 17 0
+Greenhouse 9 18 4
+ToxicWasteland 8 19 2
+
+Zed 9 11
+PinkGoblin 0 4
+Patawlian 15 10
+Saveela 1 3
