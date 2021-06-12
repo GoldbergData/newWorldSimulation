@@ -12,5 +12,6 @@ const vector<Moves> circleCC = {WEST, SOUTH, EAST, NORTH};
 
 //CURRENT INITIAL SPOTS FOR ALL ORBITS - TOP RIGHT CORNER, CLOCKWISE
 Moves getMove(long currentTurn, Movesets moveSet);
+void updateCoordinates(int& row, int& col, Moves move, int gridSize);
 
 #endif

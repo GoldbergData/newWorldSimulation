@@ -2,8 +2,7 @@
 #include <iostream>
 using namespace std;
 
-Moves getMove(long currentTurn, Movesets moveSet /*int offset*/) {
-    //currentTurn += offset; //to start somewhere other than top right corner
+Moves getMove(long currentTurn, Movesets moveSet) {
     if (moveSet == STATIONARY) {
         return CENTER;
     } else if (moveSet == CLOSE) {
@@ -20,5 +19,40 @@ Moves getMove(long currentTurn, Movesets moveSet /*int offset*/) {
         return circle[currentTurn / 6 % circle.size()];
     }else {
         return CENTER;
+    }
+}
+
+void updateCoordinates(int& row, int& col, Moves move, int gridSize) {
+    if (move == NORTH) {
+        row -= 1;
+    } else if (move == NORTHEAST) {
+        row -= 1;
+        col += 1;
+    } else if (move == EAST) {
+        col += 1;
+    } else if (move == SOUTHEAST) {
+        row += 1;
+        col += 1;
+    } else if (move == SOUTH) {
+        row += 1;
+    } else if (move == SOUTHWEST) {
+        row += 1;
+        col += 1;
+    } else if (move == WEST) {
+        col -= 1;
+    } else if (move == NORTHWEST) {
+        row -= 1;
+        col -= 1;
+    }
+    //handle edge wrapping of coordinates
+    if (row == gridSize) {
+        row = 0;
+    } else if (row < 0) {
+        row = gridSize - 1;
+    }
+    if (col == gridSize) {
+        col = 0;
+    } else if (col < 0) {
+        col = gridSize - 1;
     }
 }

@@ -44,7 +44,7 @@ GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     createButtons();
     createRadioButtons();
     redraw();
-    window->setTimerListener(300, [this] {
+    window->setTimerListener(50, [this] {
         this->checkImage();
     });
 }
@@ -115,19 +115,16 @@ void GalaxyGUI::redraw() {
     //Get coordinates
     for (int i = 0; i < galaxy->getSize(); i++) {
         for (int j = 0; j < galaxy->getSize(); j++) {
-            //Grab SpaceObject and Spaceship
+            //grab and draw anything that's not a nullptr
             SpaceObject* spaceObject = galaxy->getSpaceObject(i, j);
             SpaceObject* spaceship = galaxy->getSpaceship(i, j);
             SpaceObject* explosion = galaxy->getExplosion(i, j);
-            //Draw SpaceObject if one exists
             if (spaceObject != nullptr) {
                 drawSpaceObject(spaceObject, i, j);
             }
-            //Draw Spaceship if one exists
             if (spaceship != nullptr) {
                 drawSpaceship(spaceship, i, j);
             }
-            //Draw Explosion if one exists
             if (explosion != nullptr) {
                 drawExplosion(explosion, i, j);
             }

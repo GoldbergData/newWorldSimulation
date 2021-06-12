@@ -5,6 +5,7 @@
 #include <iostream>
 using namespace std;
 
+//launcher
 int main() {
     //Galaxy galaxy(30, 30);
     //cout << galaxy << endl;

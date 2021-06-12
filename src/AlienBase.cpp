@@ -43,5 +43,5 @@ void AlienBase::reduceCooldown() {
 }
 
 void AlienBase::resetCooldown() {
-    cooldown = 1;
+    cooldown = 75;
 }
