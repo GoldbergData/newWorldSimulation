@@ -64,13 +64,13 @@ void GalaxyGUI::setMapFile() {
 
 void GalaxyGUI::checkImage() {
     if (grbBackground1->isSelected()) {
-        setImage("Background1.png");
+        setImage("Background4.png");
     } else if (grbBackground2->isSelected()) {
         setImage("Background2.png");
     } else if (grbBackground3->isSelected()) {
         setImage("Background3.png");
     } else {
-        setImage("Background4.png");
+        setImage("Background1.png");
     }
 }
 
@@ -118,7 +118,6 @@ void GalaxyGUI::createButtons() {
         gbSetMap->setEnabled(true);
     });
     //initial buttons states and add
-    gbStart->setEnabled(false);
     gbStop->setEnabled(false);
     gbReset->setEnabled(false);
     window->addToRegion(gbSetMap, "East");
@@ -141,10 +140,10 @@ void GalaxyGUI::createRadioButtons() {
     glBackgrounds->setColor("white");
     window->addToRegion(glBackgrounds, "East");
     //buttons
-    createSingleRadio("Blue Mist", &grbBackground1);
+    createSingleRadio("Dim Starlight", &grbBackground1);
     grbBackground1->setSelected(true);
     createSingleRadio("Dark Void", &grbBackground2);
-    createSingleRadio("Dim Starlight", &grbBackground3);
+    createSingleRadio("Blue Mist", &grbBackground3);
     createSingleRadio("Purple Haze", &grbBackground3);
     //checks for radio buttons being changed
     window->setTimerListener(200, [this] {
