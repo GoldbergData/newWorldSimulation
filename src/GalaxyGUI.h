@@ -23,6 +23,7 @@ public:
     void createButtons();
     void createSingleRadio(string text, GRadioButton** nameOut);
     void createRadioButtons();
+    void createMapChooser();
     void tick();
     void redraw();
     void drawSpaceObject(SpaceObject* spaceObject, int row, int col);

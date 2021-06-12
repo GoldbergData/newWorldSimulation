@@ -17,6 +17,7 @@
 #include "gobjects.h"
 #include "gtextfield.h"
 #include "gchooser.h"
+#include "glabel.h"
 using namespace sgl;
 
 const vector<string> GalaxyGUI::moveStrings = {"C", "N", "E", "S", "W", "NE", "NW", "SE", "SW"};
@@ -26,11 +27,12 @@ GRadioButton* grbBackground1;
 GRadioButton* grbBackground2;
 GRadioButton* grbBackground3;
 GRadioButton* grbBackground4;
-GButton* gbChangeMap;
+GButton* gbSetMap;
 GButton* gbStart;
 GButton* gbStop;
-GButton* gbRestart;
+GButton* gbReset;
 GChooser* gcMapSelect;
+GLabel* glInstructions;
 
 GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     //set GWindow
@@ -47,22 +49,17 @@ GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     this->squareSize = squareSize;
     currentTurn = 0;
     //creating buttons, other misc setup
+    createMapChooser();
     createButtons();
     createRadioButtons();
-    gcMapSelect = new GChooser(mapFiles);
-    window->setTimerListener(200, [this] {
-        this->checkImage();
-    });
 }
-
 
 void GalaxyGUI::setMapFile() {
     string filename = gcMapSelect->getSelectedItem() + ".txt";
     int tileCount = windowSize / squareSize;
     Galaxy* newGalaxy = new Galaxy(tileCount, tileCount, filename);
+    galaxy = newGalaxy;
 }
-
-
 
 void GalaxyGUI::checkImage() {
     if (grbBackground1->isSelected()) {
@@ -78,8 +75,17 @@ void GalaxyGUI::setImage(string imageFile) {
 }
 
 void GalaxyGUI::createButtons() {
+    gbSetMap = new GButton("SET MAP");
+    gbSetMap->setClickListener([this] {
+        gbStart->setEnabled(true);
+        setMapFile();
+    });
     gbStart = new GButton("START");
     gbStart->setClickListener([this] {
+        gbSetMap->setEnabled(false);
+        gbStop->setEnabled(true);
+        gbStart->setEnabled(false);
+        gbReset->setEnabled(false);
         //Timer listeners don't replace properly, and seem to perform the
         //actions of both listeners and using both time intervals. This
         //is a rough workaround.
@@ -89,6 +95,9 @@ void GalaxyGUI::createButtons() {
     });
     gbStop = new GButton("STOP"); 
     gbStop->setClickListener([this] {
+        gbReset->setEnabled(true);
+        gbStart->setEnabled(true);
+        gbStop->setEnabled(false);
         //Remove doesnt remove, it seems to only pause.
         window->removeTimerListener();
         //Unpauses the checker for background image selection
@@ -96,8 +105,21 @@ void GalaxyGUI::createButtons() {
             this->checkImage();
         });
     });
+    gbReset = new GButton("RESET");
+    gbReset->setClickListener([this] {
+        setMapFile();
+        currentTurn = 0;
+        gbReset->setEnabled(false);
+        gbSetMap->setEnabled(true);
+    });
+    //initial buttons states and add
+    gbStart->setEnabled(false);
+    gbStop->setEnabled(false);
+    gbReset->setEnabled(false);
+    window->addToRegion(gbSetMap, "East");
     window->addToRegion(gbStart, "East");
     window->addToRegion(gbStop, "East");
+    window->addToRegion(gbReset, "East");
 }
 
 void GalaxyGUI::createSingleRadio(string text, GRadioButton** nameOut) {
@@ -114,6 +136,18 @@ void GalaxyGUI::createRadioButtons() {
     createSingleRadio("Blue Haze", &grbBackground2);
     createSingleRadio("unfinished", &grbBackground3);
     createSingleRadio("unfinished", &grbBackground4);
+    //checks for radio buttons being changed
+    window->setTimerListener(200, [this] {
+        this->checkImage();
+    });
+}
+
+void GalaxyGUI::createMapChooser() {
+    gcMapSelect = new GChooser(mapFiles);
+    glInstructions = new GLabel("Select map to begin.");
+    glInstructions->setColor("white");
+    window->addToRegion(glInstructions, "East");
+    window->addToRegion(gcMapSelect, "East");
 }
 
 void GalaxyGUI::tick() {
