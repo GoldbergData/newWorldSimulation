@@ -16,14 +16,21 @@
 #include "glabel.h"
 #include "gobjects.h"
 #include "gtextfield.h"
+#include "gchooser.h"
 using namespace sgl;
+
+const vector<string> GalaxyGUI::moveStrings = {"C", "N", "E", "S", "W", "NE", "NW", "SE", "SW"};
+const vector<string> GalaxyGUI::mapFiles = {"Map1", "Map2"};
 
 GRadioButton* grbBackground1;
 GRadioButton* grbBackground2;
 GRadioButton* grbBackground3;
 GRadioButton* grbBackground4;
+GButton* gbChangeMap;
 GButton* gbStart;
 GButton* gbStop;
+GButton* gbRestart;
+GChooser* gcMapSelect;
 
 GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     //set GWindow
@@ -35,19 +42,27 @@ GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     window->setAutoRepaint(false);
     //initialize member variables
     int tileCount = windowSize / squareSize;
-    galaxy = new Galaxy(tileCount, tileCount, "TestGalaxy.txt");
+    galaxy = new Galaxy(tileCount, tileCount, "Map0.txt");
     this->windowSize = windowSize;
     this->squareSize = squareSize;
-    backgroundImage = "Background2.png";
     currentTurn = 0;
     //creating buttons, other misc setup
     createButtons();
     createRadioButtons();
-    redraw();
-    window->setTimerListener(50, [this] {
+    gcMapSelect = new GChooser(mapFiles);
+    window->setTimerListener(200, [this] {
         this->checkImage();
     });
 }
+
+
+void GalaxyGUI::setMapFile() {
+    string filename = gcMapSelect->getSelectedItem() + ".txt";
+    int tileCount = windowSize / squareSize;
+    Galaxy* newGalaxy = new Galaxy(tileCount, tileCount, filename);
+}
+
+
 
 void GalaxyGUI::checkImage() {
     if (grbBackground1->isSelected()) {
@@ -64,7 +79,6 @@ void GalaxyGUI::setImage(string imageFile) {
 
 void GalaxyGUI::createButtons() {
     gbStart = new GButton("START");
-    //gbTestButton1->setAccelerator("ctrl F");     // hotkey apparently
     gbStart->setClickListener([this] {
         //Timer listeners don't replace properly, and seem to perform the
         //actions of both listeners and using both time intervals. This

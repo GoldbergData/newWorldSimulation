@@ -5,8 +5,6 @@
 #include <string>
 using namespace sgl;
 
-const vector<string> moveStrings = {"C", "N", "E", "S", "W", "NE", "NW", "SE", "SW"};
-
 class GalaxyGUI {
 private:
     GWindow* window;
@@ -15,8 +13,11 @@ private:
     int squareSize;
     long currentTurn;
     string backgroundImage;
+    static const vector<string> moveStrings;
+    static const vector<string> mapFiles;
 public:
     GalaxyGUI(int windowSize, int squareSize);
+    void setMapFile();
     void checkImage();
     void setImage(string imageFile);
     void createButtons();

@@ -24,7 +24,7 @@ void initializeAlienBase(string type, AlienBase** alienBase) {
         *alienBase = new AlienBase();
     } else if (type == "Zed") {
         *alienBase = new Zed();
-    }else {
+    } else {
         *alienBase = nullptr;
     }
 }

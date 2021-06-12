@@ -34,7 +34,6 @@ int interactShips(SpaceObject* ship1, SpaceObject* ship2) {
     //checks if occupants belong to different factions
     string occupant1 = ((Spaceship*)ship1)->getOccupant()->getName();
     string occupant2 = ((Spaceship*)ship2)->getOccupant()->getName();
-    cout << occupant1 << ", " << occupant2 << endl;
     if (occupant1 != occupant2) { 
         //determine winner of the fight if different factions
         long pop1 = ((Spaceship*)ship1)->getOccupant()->getPopulation();
