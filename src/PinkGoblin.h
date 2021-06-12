@@ -1,16 +1,16 @@
 //header
 
-#ifndef _Zed_h
-#define _Zed_h
+#ifndef _PinkGoblin_h
+#define _PinkGoblin_h
 
 #include <string>
 #include "AlienBase.h"
 using namespace std;
 
-class Zed : public AlienBase {
+class PinkGoblin : public AlienBase {
 private:
 public:
-    Zed();
+    PinkGoblin();
 };
 
 #endif

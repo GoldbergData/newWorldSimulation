@@ -44,7 +44,7 @@ GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     window->setAutoRepaint(false);
     //initialize member variables
     int tileCount = windowSize / squareSize;
-    galaxy = new Galaxy(tileCount, tileCount, "Map0.txt");
+    galaxy = new Galaxy(tileCount, tileCount, "Map1.txt");
     this->windowSize = windowSize;
     this->squareSize = squareSize;
     currentTurn = 0;
@@ -52,6 +52,13 @@ GalaxyGUI::GalaxyGUI(int windowSize, int squareSize) {
     createMapChooser();
     createButtons();
     createRadioButtons();
+<<<<<<< HEAD
+=======
+    gcMapSelect = new GChooser(mapFiles);
+    window->setTimerListener(50, [this] {
+        this->checkImage();
+    });
+>>>>>>> 92217f573a8e3a79f2371fcafd97f2c5614a7f84
 }
 
 void GalaxyGUI::setMapFile() {

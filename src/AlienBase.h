@@ -6,7 +6,6 @@
 #include <string>
 using namespace std;
 
-//VERY UNFINISHED, BARE MINIMUM FOR PLANET INSERT
 class AlienBase {
 private:
     string name;
