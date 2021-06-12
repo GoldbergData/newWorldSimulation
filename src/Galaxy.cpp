@@ -34,12 +34,15 @@ vector<vector<SpaceObject*>>* Galaxy::generateEmptyGrid(int rows, int cols) {
     return grid;
 }
 
+//separate if/else lists to methods
 //update for aliens
 void Galaxy::generateGalaxyFile(string filename) {
+    //grab bounds, set up
     ifstream read;
     read.open(filename);
     int spaceObjectCount; read >> spaceObjectCount;
     int alienCount; read >> alienCount;
+    //read space object spawning data
     for (int i = 0; i < spaceObjectCount; i++) {
         string type; read >> type;
         string temp;
@@ -58,6 +61,7 @@ void Galaxy::generateGalaxyFile(string filename) {
         }
         (*galaxy)[row][col] = spaceObject;
     }
+    //read alien spawning data
     for (int i = 0; i < alienCount; i++) {
         string alienType; read >> alienType;
         string temp;
@@ -177,6 +181,7 @@ void Galaxy::spawnShip(int row, int col, AlienBase* occupant,
     }
 }
 
+//interact file?
 bool Galaxy::updatePopulation(SpaceObject* spaceObject, AlienBase* occupant) {
     bool full = false;
     long population = occupant->getPopulation();
@@ -246,9 +251,9 @@ void Galaxy::updateMovesShip(long turn, int row, int col, SpaceObject* objectToM
     }
 }
 
+//interact file?
 AlienBase* Galaxy::createColony(string alienType) {
     AlienBase* newColony;
-    cout << alienType << endl; //DEBUG
     if (alienType == "Zed") {
         newColony = new Zed();
     } else {
@@ -257,6 +262,7 @@ AlienBase* Galaxy::createColony(string alienType) {
     return newColony;
 }
 
+//move to orbits?
 void Galaxy::updateCoordinates(int& row, int& col, Moves move) {
     if (move == NORTH) {
         row -= 1;
@@ -279,6 +285,7 @@ void Galaxy::updateCoordinates(int& row, int& col, Moves move) {
         row -= 1;
         col -= 1;
     }
+    //handle edge wrapping of coordinates
     if (row == galaxy->size()) {
         row = 0;
     } else if (row < 0) {
@@ -291,6 +298,7 @@ void Galaxy::updateCoordinates(int& row, int& col, Moves move) {
     }
 }
 
+//interact file?
 //0 = no fight, 1 = ship1 wins, 2 = ship2 wins
 int Galaxy::interactShips(SpaceObject* ship1, SpaceObject* ship2) {
     //Checks if occupants belong to different factions
@@ -316,6 +324,7 @@ int Galaxy::interactShips(SpaceObject* ship1, SpaceObject* ship2) {
     return 0;
 }
 
+//interact file?
 //0 if no action, 1 if ship destroyed, 2 if colonize
 int Galaxy::interactSpaceObject(SpaceObject* spaceObject, SpaceObject* ship) {
     //Check for planet

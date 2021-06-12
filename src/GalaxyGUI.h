@@ -1,15 +1,7 @@
-/*class CritterGui {
-    GWindow* window;
-    CritterWorld* world;
-    int windowSize;
-    int squareSize;
-public:
-    CritterGui(int windowSize, int squareSize);
-    void redraw();
-};*/
-
 #include "Galaxy.h"
 #include "gwindow.h"
+#include "gradiobutton.h"
+
 #include <string>
 using namespace sgl;
 
@@ -22,8 +14,18 @@ private:
     int windowSize;
     int squareSize;
     long currentTurn;
+    string backgroundImage;
 public:
     GalaxyGUI(int windowSize, int squareSize);
+    void checkImage();
+    void setImage(string imageFile);
+    void createButtons();
+    void createSingleRadio(string text, GRadioButton** nameOut);
+    void createRadioButtons();
+    void tick();
     void redraw();
-    string getImage(string name, Moves lastMove);
+    void drawSpaceObject(SpaceObject* spaceObject, int row, int col);
+    void drawSpaceship(SpaceObject* spaceship, int row, int col);
+    void drawExplosion(SpaceObject* explosion, int row, int col);
+    string getShipImage(string name, Moves lastMove) const;
 };
