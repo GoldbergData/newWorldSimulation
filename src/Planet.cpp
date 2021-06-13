@@ -1,10 +1,19 @@
-//header
+/**
+ * @file Planet.cpp
+ * @author John Nguyen, Joshua Goldberg (jvn1567@gmail.com, J.GOLDBERG4674@edmail.edcc.edu)
+ * @brief 
+ * @version 0.1
+ * @date 2021-06-12
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #include "Planet.h"
 #include <string>
 using namespace std;
 
-//header
+
 Planet::Planet(Movesets moveset) : SpaceObject(moveset) {
     occupant = nullptr;
     capacity = 1000000;

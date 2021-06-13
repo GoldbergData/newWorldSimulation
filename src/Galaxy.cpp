@@ -1,4 +1,12 @@
-//header
+/**
+ * @file Galaxy.cpp
+ * @author John Nguyen, Joshua Goldberg (jvn1567@gmail.com, J.GOLDBERG4674@edmail.edcc.edu)
+ * @version 0.1
+ * @date 2021-06-12
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #include <fstream>
 #include <iostream>
@@ -98,7 +106,6 @@ void Galaxy::update(long turn) {
     vector<vector<SpaceObject*>>* newExplosions = generateEmptyGrid(size, size);
     for (int i = 0; i < galaxy->size(); i++) {
         for (int j = 0; j < galaxy->size(); j++) {
-            //move planets
             SpaceObject* spaceObject = (*galaxy)[i][j];
             SpaceObject* spaceship = (*spaceships)[i][j];
             SpaceObject* explosion = (*explosions)[i][j];

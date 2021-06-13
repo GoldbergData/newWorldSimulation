@@ -1,3 +1,13 @@
+/**
+ * @file ClassFilter.cpp
+ * @author John Nguyen, Joshua Goldberg (jvn1567@gmail.com, J.GOLDBERG4674@edmail.edcc.edu)
+ * @version 0.1
+ * @date 2021-06-12
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include "ClassFilter.h"
 #include "Orbits.h"
 
