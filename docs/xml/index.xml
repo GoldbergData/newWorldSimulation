@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="class_alien_base" kind="class"><name>AlienBase</name>
+    <member refid="class_alien_base_1a5ee39be8514210cd1feff3dd3131b8e8" kind="variable"><name>name</name></member>
+    <member refid="class_alien_base_1a217abe8521c9339010864422841f1b5b" kind="variable"><name>population</name></member>
+    <member refid="class_alien_base_1a2cda81c18fa696f2e3837a031a2f4cb1" kind="variable"><name>cooldown</name></member>
+    <member refid="class_alien_base_1ad5f8781b09306ea415466824824867d8" kind="function"><name>AlienBase</name></member>
+    <member refid="class_alien_base_1a401cc8094ef586ffa474b54b623dcce9" kind="function"><name>AlienBase</name></member>
+    <member refid="class_alien_base_1ad54dcd1159a008fa098f576ade3699b5" kind="function"><name>getName</name></member>
+    <member refid="class_alien_base_1a4f63246794c4bb66f74d2ddee58cab33" kind="function"><name>getPopulation</name></member>
+    <member refid="class_alien_base_1ac3c489ced3939e38895454afd09d4e4b" kind="function"><name>getIncrease</name></member>
+    <member refid="class_alien_base_1a06708036adc74aa50e2440c9a1a9a1c6" kind="function"><name>getCooldown</name></member>
+    <member refid="class_alien_base_1a4cc26acbd74caf53215e27fb86cda384" kind="function"><name>setPopulation</name></member>
+    <member refid="class_alien_base_1aed5e15bfa1aa08b23d108051dfac4517" kind="function"><name>reduceCooldown</name></member>
+    <member refid="class_alien_base_1a04acebca59daf2e3137daa80da6a859e" kind="function"><name>resetCooldown</name></member>
+  </compound>
+  <compound refid="class_explosion" kind="class"><name>Explosion</name>
+    <member refid="class_explosion_1a66a02d5beabe68dc0061a128b1410b72" kind="variable"><name>stage</name></member>
+    <member refid="class_explosion_1a3686b2a9c2072b43726734bdba034b81" kind="function"><name>Explosion</name></member>
+    <member refid="class_explosion_1a8dcc64686a11a79267716a0985babbc3" kind="function"><name>getName</name></member>
+    <member refid="class_explosion_1abb8850469b49c72435a33c58ff1257ef" kind="function"><name>getStage</name></member>
+    <member refid="class_explosion_1abedb3f96df9e5b2ea8bd93f4f9378543" kind="function"><name>decrementStage</name></member>
+  </compound>
+  <compound refid="class_galaxy" kind="class"><name>Galaxy</name>
+    <member refid="class_galaxy_1aff92fe23ca8e15969f5ed38074777d35" kind="variable"><name>galaxy</name></member>
+    <member refid="class_galaxy_1a38057c2f881fd16389d1d8f90de28796" kind="variable"><name>spaceships</name></member>
+    <member refid="class_galaxy_1ac2f357d522b878444b2c210315d1744f" kind="variable"><name>explosions</name></member>
+    <member refid="class_galaxy_1a59503bdf169d7af9efcc226854dc9429" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="class_galaxy_1a40bb8e9c6fb435226b056e313eb798ff" kind="function"><name>Galaxy</name></member>
+    <member refid="class_galaxy_1a819ce689c1fe9b820bf7b6ba075c2400" kind="function"><name>generateEmptyGrid</name></member>
+    <member refid="class_galaxy_1a78741b49a07ed9f0d2d0fd020d232e1d" kind="function"><name>generateFromFile</name></member>
+    <member refid="class_galaxy_1a054fb990d9fa0aafd900912beaeb9834" kind="function"><name>getSpaceObject</name></member>
+    <member refid="class_galaxy_1a7ec6858ab998ce9f8007e6e652ad1fd4" kind="function"><name>getOccupant</name></member>
+    <member refid="class_galaxy_1a342225cdb516eb23306fd049d23d32b5" kind="function"><name>getSpaceship</name></member>
+    <member refid="class_galaxy_1aa2f14d637d381bd7769a551a4b6017a0" kind="function"><name>getExplosion</name></member>
+    <member refid="class_galaxy_1a2123334fdff8c73579e85a01c40ab6eb" kind="function"><name>getSize</name></member>
+    <member refid="class_galaxy_1a97cd607381249e56b597375950e8480a" kind="function"><name>update</name></member>
+    <member refid="class_galaxy_1ae98aa94efe1b7e5aa21f77f3074aed42" kind="function"><name>updateSpaceObject</name></member>
+    <member refid="class_galaxy_1a894c8953607f1e0c553a0cae62aec7e1" kind="function"><name>updateShip</name></member>
+  </compound>
+  <compound refid="class_galaxy_g_u_i" kind="class"><name>GalaxyGUI</name>
+    <member refid="class_galaxy_g_u_i_1a4e07057e04bf99df15d4b2b8f1db3b6d" kind="variable"><name>window</name></member>
+    <member refid="class_galaxy_g_u_i_1a28a10756d13503fbc263dfafca2a258b" kind="variable"><name>galaxy</name></member>
+    <member refid="class_galaxy_g_u_i_1a86f30050e98194957c5bd74bca977493" kind="variable"><name>windowSize</name></member>
+    <member refid="class_galaxy_g_u_i_1a3f36ce2bd194054584ddffd01b2b9bfa" kind="variable"><name>squareSize</name></member>
+    <member refid="class_galaxy_g_u_i_1a232829bfe541898d855fcfd76d419226" kind="variable"><name>currentTurn</name></member>
+    <member refid="class_galaxy_g_u_i_1a701321c21b6e4bf097a35750d417dcde" kind="variable"><name>backgroundImage</name></member>
+    <member refid="class_galaxy_g_u_i_1afccf0c13ab22cb0c72c3438ffa727f47" kind="variable"><name>moveStrings</name></member>
+    <member refid="class_galaxy_g_u_i_1a2f63364b4b218b821365d74f6c195bce" kind="variable"><name>mapFiles</name></member>
+    <member refid="class_galaxy_g_u_i_1abe98bc182652186248dc55385ec6a5f2" kind="function"><name>GalaxyGUI</name></member>
+    <member refid="class_galaxy_g_u_i_1ac37f8c9ec31ce172870eeee1791ca152" kind="function"><name>setMapFile</name></member>
+    <member refid="class_galaxy_g_u_i_1a703991a6b66717767f51b381f7d45859" kind="function"><name>checkImage</name></member>
+    <member refid="class_galaxy_g_u_i_1a0d39db7c51cd1c20f9912e3020346b9e" kind="function"><name>setImage</name></member>
+    <member refid="class_galaxy_g_u_i_1a9d5b08aac681145115c3e2be23aedfa2" kind="function"><name>createButtons</name></member>
+    <member refid="class_galaxy_g_u_i_1a77e802fceefeee81ea6af362e9c1496a" kind="function"><name>createSingleRadio</name></member>
+    <member refid="class_galaxy_g_u_i_1a2520d2e558b23f560caaa85c8ce6dfbf" kind="function"><name>createRadioButtons</name></member>
+    <member refid="class_galaxy_g_u_i_1a089cbe5ad71bc5a93b40dc31b144091d" kind="function"><name>createMapChooser</name></member>
+    <member refid="class_galaxy_g_u_i_1a1e3a116b30b5f9b4b3704086848125de" kind="function"><name>tick</name></member>
+    <member refid="class_galaxy_g_u_i_1ae40bcb104b8d3e4d4fbadf397e2c457f" kind="function"><name>redraw</name></member>
+    <member refid="class_galaxy_g_u_i_1ab899eada60b91c71ec3c16a429e94126" kind="function"><name>drawSpaceObject</name></member>
+    <member refid="class_galaxy_g_u_i_1acf1af1bd9cafbe92b292b2c9add38b66" kind="function"><name>drawSpaceship</name></member>
+    <member refid="class_galaxy_g_u_i_1aace9dad5be305079aae489e17985bb50" kind="function"><name>drawExplosion</name></member>
+    <member refid="class_galaxy_g_u_i_1a3c636ca27dc27dd5d44d07acc06c7537" kind="function"><name>getShipImage</name></member>
+  </compound>
+  <compound refid="class_greenhouse" kind="class"><name>Greenhouse</name>
+    <member refid="class_greenhouse_1aa2d615a3b646c2605fbed6351c786543" kind="function"><name>Greenhouse</name></member>
+    <member refid="class_greenhouse_1a4c0d2f82f67a65f16932648392558f05" kind="function"><name>getHazard</name></member>
+    <member refid="class_greenhouse_1a0ec819d4b5b627b8a7fe7fa4c0a9129b" kind="function"><name>getName</name></member>
+  </compound>
+  <compound refid="class_ice_world" kind="class"><name>IceWorld</name>
+    <member refid="class_ice_world_1a52b0d2f181c23d31f724495e1648ba21" kind="function"><name>IceWorld</name></member>
+    <member refid="class_ice_world_1a5c31d6fe79c6db4d059abe288e1958d8" kind="function"><name>getHazard</name></member>
+    <member refid="class_ice_world_1ae07dc2d281358a0ea33560374dc892a6" kind="function"><name>getName</name></member>
+  </compound>
+  <compound refid="class_patawlian" kind="class"><name>Patawlian</name>
+    <member refid="class_patawlian_1a3397c6c806edae5fafbc7f9da65bc395" kind="function"><name>Patawlian</name></member>
+  </compound>
+  <compound refid="class_pink_goblin" kind="class"><name>PinkGoblin</name>
+    <member refid="class_pink_goblin_1a183a1f888d997f110d77d45ca7f5caf0" kind="function"><name>PinkGoblin</name></member>
+  </compound>
+  <compound refid="class_planet" kind="class"><name>Planet</name>
+    <member refid="class_planet_1a87de6f2d924e07975c6f8384a7ddaaea" kind="variable"><name>occupant</name></member>
+    <member refid="class_planet_1a50e8db8789932ba4513454750e1f947e" kind="variable"><name>capacity</name></member>
+    <member refid="class_planet_1a063bf75b28301b4042d3cb35b96683c5" kind="variable"><name>baseTemperature</name></member>
+    <member refid="class_planet_1a869b3c7f4cb0398d28dc25664bc45073" kind="function"><name>Planet</name></member>
+    <member refid="class_planet_1a8a99d7aa6cf6ae17b3557f284aa0b983" kind="function"><name>getCapacity</name></member>
+    <member refid="class_planet_1a59c5ec990d712d68e0eac74e63ee2d8c" kind="function"><name>getTemperature</name></member>
+    <member refid="class_planet_1a3e80a10130f33b5e74b869f73f108f68" kind="function"><name>isHabitable</name></member>
+    <member refid="class_planet_1ad75da2be32f572291190b1f6e0b9988d" kind="function"><name>setOccupant</name></member>
+    <member refid="class_planet_1a391e4a6fba35535c7bdf9e60a69acdf0" kind="function"><name>getOccupant</name></member>
+    <member refid="class_planet_1a2bb1e03e4889ec74d09d4172535b253f" kind="function"><name>getHazard</name></member>
+    <member refid="class_planet_1afca216f7779d94e5cff0e731cfd8e22d" kind="function"><name>getBonus</name></member>
+    <member refid="class_planet_1a71b53477ffa0201f2096bcd9f30f9d79" kind="function"><name>getName</name></member>
+  </compound>
+  <compound refid="class_purple_gas" kind="class"><name>PurpleGas</name>
+    <member refid="class_purple_gas_1a811541017abcdcf95730ea24d1864885" kind="function"><name>PurpleGas</name></member>
+    <member refid="class_purple_gas_1a9e236a0e424af52c43ee9fdbdf619f9d" kind="function"><name>getHazard</name></member>
+    <member refid="class_purple_gas_1ae0d987946a535897c4734a045477e909" kind="function"><name>getName</name></member>
+  </compound>
+  <compound refid="class_rock_slide" kind="class"><name>RockSlide</name>
+    <member refid="class_rock_slide_1a1154cf77420cf16b79758c972d14e92d" kind="function"><name>RockSlide</name></member>
+    <member refid="class_rock_slide_1a16c75d8d4b3644ec9f41f9c481f2461a" kind="function"><name>getHazard</name></member>
+    <member refid="class_rock_slide_1a3cdfe346bb2a6bd142e46e3777107274" kind="function"><name>getName</name></member>
+  </compound>
+  <compound refid="class_saveela" kind="class"><name>Saveela</name>
+    <member refid="class_saveela_1a538cc08a66ddbb3b75a8938d81a2a6f5" kind="function"><name>Saveela</name></member>
+  </compound>
+  <compound refid="class_space_object" kind="class"><name>SpaceObject</name>
+    <member refid="class_space_object_1a976c6bf5f76d3e867155656a00f458bd" kind="variable"><name>moveset</name></member>
+    <member refid="class_space_object_1ada1c7e18d754a1b5d3aed74728eb9ae1" kind="function"><name>SpaceObject</name></member>
+    <member refid="class_space_object_1a75db7c70ae486ab5722d915debb580eb" kind="function"><name>SpaceObject</name></member>
+    <member refid="class_space_object_1aa687c78e50a36b439d529d294fe5a753" kind="function"><name>isHabitable</name></member>
+    <member refid="class_space_object_1a9fe801118d2b1c48183dabf53b92bb30" kind="function"><name>getMoveset</name></member>
+    <member refid="class_space_object_1a13f951c4ab7a033c6bf023e469304381" kind="function"><name>getName</name></member>
+  </compound>
+  <compound refid="class_spaceship" kind="class"><name>Spaceship</name>
+    <member refid="class_spaceship_1a1808f9abd4e10597f6e59c717856b567" kind="variable"><name>occupant</name></member>
+    <member refid="class_spaceship_1aa5a0149fa6fa131f1db06d00c202e219" kind="variable"><name>lastMove</name></member>
+    <member refid="class_spaceship_1a6977e4820ae8718e978509a0e6b05371" kind="function"><name>Spaceship</name></member>
+    <member refid="class_spaceship_1a20c6b312931d93142365dc881dd19f32" kind="function"><name>getOccupant</name></member>
+    <member refid="class_spaceship_1a46ac2a4f3fa29dc6dfacbbb0e7d9cb00" kind="function"><name>getLastMove</name></member>
+    <member refid="class_spaceship_1ac5681c2f823e7525ba30d27a579d73f4" kind="function"><name>setLastMove</name></member>
+  </compound>
+  <compound refid="class_star" kind="class"><name>Star</name>
+    <member refid="class_star_1a4437117e41b50e60553a1919ea110d19" kind="variable"><name>temperature</name></member>
+    <member refid="class_star_1a3078324b2a606a8c248984f166700069" kind="variable"><name>filename</name></member>
+    <member refid="class_star_1ac174c691c269196c47324a13c3c9f903" kind="function"><name>Star</name></member>
+    <member refid="class_star_1a52afd3d0ca11a4e451ab84d2c6411d52" kind="function"><name>getTemperature</name></member>
+    <member refid="class_star_1acf2ce02424766b63f58d582672a1cb23" kind="function"><name>getName</name></member>
+    <member refid="class_star_1a56656ec995f522ee3938270c3d62f153" kind="function"><name>getFilename</name></member>
+  </compound>
+  <compound refid="class_toxic_wasteland" kind="class"><name>ToxicWasteland</name>
+    <member refid="class_toxic_wasteland_1a8993d73ff9d6e723e5379a6a42f13074" kind="function"><name>ToxicWasteland</name></member>
+    <member refid="class_toxic_wasteland_1a31348fcce53153d23247b10b0eeab666" kind="function"><name>getHazard</name></member>
+    <member refid="class_toxic_wasteland_1a2a818c25226021411ecaced84923e018" kind="function"><name>getName</name></member>
+  </compound>
+  <compound refid="class_zed" kind="class"><name>Zed</name>
+    <member refid="class_zed_1a3b67df14e627a34e2218375d1aca3f70" kind="function"><name>Zed</name></member>
+  </compound>
+  <compound refid="namespacenew_world_simulation" kind="namespace"><name>newWorldSimulation</name>
+  </compound>
+  <compound refid="namespacesgl" kind="namespace"><name>sgl</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="mainpage_8dox" kind="file"><name>mainpage.dox</name>
+  </compound>
+  <compound refid="_alien_base_8cpp" kind="file"><name>AlienBase.cpp</name>
+  </compound>
+  <compound refid="_alien_base_8h" kind="file"><name>AlienBase.h</name>
+  </compound>
+  <compound refid="_class_filter_8cpp" kind="file"><name>ClassFilter.cpp</name>
+    <member refid="_class_filter_8cpp_1a46f0acb169ff176eefb6e0ac6695072a" kind="function"><name>initializeSpaceObject</name></member>
+    <member refid="_class_filter_8cpp_1a9b634e100c608c4fc5522d7f0b7987c6" kind="function"><name>initializeAlienBase</name></member>
+  </compound>
+  <compound refid="_class_filter_8h" kind="file"><name>ClassFilter.h</name>
+    <member refid="_class_filter_8h_1a46f0acb169ff176eefb6e0ac6695072a" kind="function"><name>initializeSpaceObject</name></member>
+    <member refid="_class_filter_8h_1a9b634e100c608c4fc5522d7f0b7987c6" kind="function"><name>initializeAlienBase</name></member>
+  </compound>
+  <compound refid="_event_handler_8cpp" kind="file"><name>EventHandler.cpp</name>
+    <member refid="_event_handler_8cpp_1a71665927f75d3f1d8f6a88b22b413dd4" kind="function"><name>interactSpaceObject</name></member>
+    <member refid="_event_handler_8cpp_1ae45a3939c0c91efd57eb8164e47df737" kind="function"><name>interactShips</name></member>
+    <member refid="_event_handler_8cpp_1af3ce683f37c732f1b1f5be42912ab067" kind="function"><name>updatePopulation</name></member>
+    <member refid="_event_handler_8cpp_1a0f95693b5102da773cd278a05ad5cd33" kind="function"><name>sendShip</name></member>
+  </compound>
+  <compound refid="_event_handler_8h" kind="file"><name>EventHandler.h</name>
+    <member refid="_event_handler_8h_1a71665927f75d3f1d8f6a88b22b413dd4" kind="function"><name>interactSpaceObject</name></member>
+    <member refid="_event_handler_8h_1ae45a3939c0c91efd57eb8164e47df737" kind="function"><name>interactShips</name></member>
+    <member refid="_event_handler_8h_1af3ce683f37c732f1b1f5be42912ab067" kind="function"><name>updatePopulation</name></member>
+    <member refid="_event_handler_8h_1a0f95693b5102da773cd278a05ad5cd33" kind="function"><name>sendShip</name></member>
+  </compound>
+  <compound refid="_explosion_8cpp" kind="file"><name>Explosion.cpp</name>
+  </compound>
+  <compound refid="_explosion_8h" kind="file"><name>Explosion.h</name>
+  </compound>
+  <compound refid="_galaxy_8cpp" kind="file"><name>Galaxy.cpp</name>
+    <member refid="_galaxy_8cpp_1a59503bdf169d7af9efcc226854dc9429" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="_galaxy_8cpp_1aa5cb2002c1b6821c93a2b782b5431bd3" kind="function"><name>printHelper</name></member>
+  </compound>
+  <compound refid="_galaxy_8h" kind="file"><name>Galaxy.h</name>
+    <member refid="_galaxy_8h_1aa5cb2002c1b6821c93a2b782b5431bd3" kind="function"><name>printHelper</name></member>
+  </compound>
+  <compound refid="_galaxy_g_u_i_8cpp" kind="file"><name>GalaxyGUI.cpp</name>
+    <member refid="_galaxy_g_u_i_8cpp_1aeb54fc561d992629bed9eda6dc893b50" kind="variable"><name>grbBackground1</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1aa712ea8dd1467d275105ebe21c3fce9c" kind="variable"><name>grbBackground2</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1a90f62977d02897ff253d809a4a37effd" kind="variable"><name>grbBackground3</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1a757420a087f062838096a2cb2dfc1033" kind="variable"><name>grbBackground4</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1ab1af5310e2c5c738d5e6fd03fd3d032c" kind="variable"><name>gbSetMap</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1a419670db821dfc121b2b9081185816b1" kind="variable"><name>gbStart</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1ae7856d83c6dcd262db3d02216d00673c" kind="variable"><name>gbStop</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1a13b64d9d73cd5b0c0f24fdd8847bb088" kind="variable"><name>gbReset</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1a4e3a2a3c147b509bb5c8f5e8fce48fbc" kind="variable"><name>gcMapSelect</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1a6f70fa3608764255b76dc9c44c3e5717" kind="variable"><name>glInstructions</name></member>
+    <member refid="_galaxy_g_u_i_8cpp_1a09985d0d05ae276c6f14f8c53fe247ae" kind="variable"><name>glBackgrounds</name></member>
+  </compound>
+  <compound refid="_galaxy_g_u_i_8h" kind="file"><name>GalaxyGUI.h</name>
+  </compound>
+  <compound refid="_greenhouse_8cpp" kind="file"><name>Greenhouse.cpp</name>
+  </compound>
+  <compound refid="_greenhouse_8h" kind="file"><name>Greenhouse.h</name>
+  </compound>
+  <compound refid="_ice_world_8cpp" kind="file"><name>IceWorld.cpp</name>
+  </compound>
+  <compound refid="_ice_world_8h" kind="file"><name>IceWorld.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_orbits_8cpp" kind="file"><name>Orbits.cpp</name>
+    <member refid="_orbits_8cpp_1a6a6a522373b50b4ae018aee15659dcf9" kind="function"><name>getMove</name></member>
+    <member refid="_orbits_8cpp_1af419f555abd9e28a8579376cb84f2ecc" kind="function"><name>updateCoordinates</name></member>
+  </compound>
+  <compound refid="_orbits_8h" kind="file"><name>Orbits.h</name>
+    <member refid="_orbits_8h_1a10c2d1d3d5027b3b451da70c1b497b32" kind="enum"><name>Movesets</name></member>
+    <member refid="_orbits_8h_1a10c2d1d3d5027b3b451da70c1b497b32ac84bd0ee013c388bd7cc8139be7206a2" kind="enumvalue"><name>STATIONARY</name></member>
+    <member refid="_orbits_8h_1a10c2d1d3d5027b3b451da70c1b497b32a685f73194ad125cbc784c3210cdb3449" kind="enumvalue"><name>CLOSE</name></member>
+    <member refid="_orbits_8h_1a10c2d1d3d5027b3b451da70c1b497b32a5340ec7ecef6cc3886684a3bd3450d64" kind="enumvalue"><name>MEDIUM</name></member>
+    <member refid="_orbits_8h_1a10c2d1d3d5027b3b451da70c1b497b32aa2b65445a3a16f164c5e811064d75726" kind="enumvalue"><name>RANDOM</name></member>
+    <member refid="_orbits_8h_1a10c2d1d3d5027b3b451da70c1b497b32a0932f4f7a512d5a5d57b7fb6885e7b0f" kind="enumvalue"><name>CLOSECC</name></member>
+    <member refid="_orbits_8h_1a10c2d1d3d5027b3b451da70c1b497b32a809197e8751771c17f8d367c418d247d" kind="enumvalue"><name>MEDIUMSLOW</name></member>
+    <member refid="_orbits_8h_1a10c2d1d3d5027b3b451da70c1b497b32a4a74b534d03ab99e48c6fee5bb129cab" kind="enumvalue"><name>FAR</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8a" kind="enum"><name>Moves</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8aa2159ffbd3a68037511ab5ab4dd35ace7" kind="enumvalue"><name>CENTER</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8aad0611de6f28d4a9c9eac959f5344698e" kind="enumvalue"><name>NORTH</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8aab5b3793b961949c817c7c0d99c05dad7" kind="enumvalue"><name>EAST</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8aa8ef5c0bce69283a9986011a63eea8a6b" kind="enumvalue"><name>SOUTH</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8aae9449e8683a8199dad36b07a63b2f523" kind="enumvalue"><name>WEST</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8aaa6671505783298e4cb967931c1c1ac5b" kind="enumvalue"><name>NORTHEAST</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8aac8aee466c121a3c3c942f58e1d8864d4" kind="enumvalue"><name>NORTHWEST</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8aa16c2c7abfbd3bad3343b0dcaa858bb49" kind="enumvalue"><name>SOUTHEAST</name></member>
+    <member refid="_orbits_8h_1ace1e3431f540c4c67e72907ad57e9b8aa6aa90951b336be999de204e61dd366d4" kind="enumvalue"><name>SOUTHWEST</name></member>
+    <member refid="_orbits_8h_1a0a397773557e4043d4ef845d9bbd178f" kind="variable"><name>circle</name></member>
+    <member refid="_orbits_8h_1aadaa61d201a0f180d34a6c587faaeece" kind="variable"><name>circleCC</name></member>
+    <member refid="_orbits_8h_1a6a6a522373b50b4ae018aee15659dcf9" kind="function"><name>getMove</name></member>
+    <member refid="_orbits_8h_1af419f555abd9e28a8579376cb84f2ecc" kind="function"><name>updateCoordinates</name></member>
+  </compound>
+  <compound refid="_patawlian_8cpp" kind="file"><name>Patawlian.cpp</name>
+  </compound>
+  <compound refid="_patawlian_8h" kind="file"><name>Patawlian.h</name>
+  </compound>
+  <compound refid="_pink_goblin_8cpp" kind="file"><name>PinkGoblin.cpp</name>
+  </compound>
+  <compound refid="_pink_goblin_8h" kind="file"><name>PinkGoblin.h</name>
+  </compound>
+  <compound refid="_planet_8cpp" kind="file"><name>Planet.cpp</name>
+  </compound>
+  <compound refid="_planet_8h" kind="file"><name>Planet.h</name>
+  </compound>
+  <compound refid="_purple_gas_8cpp" kind="file"><name>PurpleGas.cpp</name>
+  </compound>
+  <compound refid="_purple_gas_8h" kind="file"><name>PurpleGas.h</name>
+  </compound>
+  <compound refid="_rock_slide_8cpp" kind="file"><name>RockSlide.cpp</name>
+  </compound>
+  <compound refid="_rock_slide_8h" kind="file"><name>RockSlide.h</name>
+  </compound>
+  <compound refid="_saveela_8cpp" kind="file"><name>Saveela.cpp</name>
+  </compound>
+  <compound refid="_saveela_8h" kind="file"><name>Saveela.h</name>
+  </compound>
+  <compound refid="_space_object_8cpp" kind="file"><name>SpaceObject.cpp</name>
+  </compound>
+  <compound refid="_space_object_8h" kind="file"><name>SpaceObject.h</name>
+  </compound>
+  <compound refid="_spaceship_8cpp" kind="file"><name>Spaceship.cpp</name>
+  </compound>
+  <compound refid="_spaceship_8h" kind="file"><name>Spaceship.h</name>
+  </compound>
+  <compound refid="_star_8cpp" kind="file"><name>Star.cpp</name>
+  </compound>
+  <compound refid="_star_8h" kind="file"><name>Star.h</name>
+  </compound>
+  <compound refid="_toxic_wasteland_8cpp" kind="file"><name>ToxicWasteland.cpp</name>
+  </compound>
+  <compound refid="_toxic_wasteland_8h" kind="file"><name>ToxicWasteland.h</name>
+  </compound>
+  <compound refid="_zed_8cpp" kind="file"><name>Zed.cpp</name>
+  </compound>
+  <compound refid="_zed_8h" kind="file"><name>Zed.h</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

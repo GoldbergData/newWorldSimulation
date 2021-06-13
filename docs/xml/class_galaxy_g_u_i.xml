@@ -1,0 +1,553 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_galaxy_g_u_i" kind="class" language="C++" prot="public">
+    <compoundname>GalaxyGUI</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_galaxy_g_u_i_1a4e07057e04bf99df15d4b2b8f1db3b6d" prot="private" static="no" mutable="no">
+        <type>GWindow *</type>
+        <definition>GWindow* GalaxyGUI::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="23" column="13" bodyfile="GalaxyGUI.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_galaxy_g_u_i_1a28a10756d13503fbc263dfafca2a258b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_galaxy" kindref="compound">Galaxy</ref> *</type>
+        <definition>Galaxy* GalaxyGUI::galaxy</definition>
+        <argsstring></argsstring>
+        <name>galaxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="24" column="12" bodyfile="GalaxyGUI.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_galaxy_g_u_i_1a86f30050e98194957c5bd74bca977493" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GalaxyGUI::windowSize</definition>
+        <argsstring></argsstring>
+        <name>windowSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="25" column="9" bodyfile="GalaxyGUI.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_galaxy_g_u_i_1a3f36ce2bd194054584ddffd01b2b9bfa" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GalaxyGUI::squareSize</definition>
+        <argsstring></argsstring>
+        <name>squareSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="26" column="9" bodyfile="GalaxyGUI.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_galaxy_g_u_i_1a232829bfe541898d855fcfd76d419226" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long GalaxyGUI::currentTurn</definition>
+        <argsstring></argsstring>
+        <name>currentTurn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="27" column="10" bodyfile="GalaxyGUI.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_galaxy_g_u_i_1a701321c21b6e4bf097a35750d417dcde" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GalaxyGUI::backgroundImage</definition>
+        <argsstring></argsstring>
+        <name>backgroundImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="28" column="12" bodyfile="GalaxyGUI.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_galaxy_g_u_i_1afccf0c13ab22cb0c72c3438ffa727f47" prot="private" static="yes" mutable="no">
+        <type>const vector&lt; string &gt;</type>
+        <definition>const vector&lt; string &gt; GalaxyGUI::moveStrings</definition>
+        <argsstring></argsstring>
+        <name>moveStrings</name>
+        <initializer>= {&quot;C&quot;, &quot;N&quot;, &quot;E&quot;, &quot;S&quot;, &quot;W&quot;, &quot;NE&quot;, &quot;NW&quot;, &quot;SE&quot;, &quot;SW&quot;}</initializer>
+        <briefdescription>
+<para>Used to append the direction of ship image file names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="34" column="25" bodyfile="GalaxyGUI.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_galaxy_g_u_i_1a2f63364b4b218b821365d74f6c195bce" prot="private" static="yes" mutable="no">
+        <type>const vector&lt; string &gt;</type>
+        <definition>const vector&lt; string &gt; GalaxyGUI::mapFiles</definition>
+        <argsstring></argsstring>
+        <name>mapFiles</name>
+        <initializer>= {&quot;Map1&quot;, &quot;Map2&quot;}</initializer>
+        <briefdescription>
+<para>Predefined maps. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="40" column="25" bodyfile="GalaxyGUI.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_galaxy_g_u_i_1abe98bc182652186248dc55385ec6a5f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GalaxyGUI::GalaxyGUI</definition>
+        <argsstring>(int windowSize, int squareSize)</argsstring>
+        <name>GalaxyGUI</name>
+        <param>
+          <type>int</type>
+          <declname>windowSize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>squareSize</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_galaxy" kindref="compound">Galaxy</ref> GUI object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>windowSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width/height of grid area, assuming a square. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>squareSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of pixel per grid location. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="48" column="5" bodyfile="GalaxyGUI.cpp" bodystart="47" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1ac37f8c9ec31ce172870eeee1791ca152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::setMapFile</definition>
+        <argsstring>()</argsstring>
+        <name>setMapFile</name>
+        <briefdescription>
+<para>Set the Map File to load from for initial <ref refid="class_galaxy" kindref="compound">Galaxy</ref> state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="54" column="10" bodyfile="GalaxyGUI.cpp" bodystart="67" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1a703991a6b66717767f51b381f7d45859" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::checkImage</definition>
+        <argsstring>()</argsstring>
+        <name>checkImage</name>
+        <briefdescription>
+<para>Checks which radio button is selected, sets the background image, and calls <ref refid="class_galaxy_g_u_i_1a0d39db7c51cd1c20f9912e3020346b9e" kindref="member">setImage()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="61" column="10" bodyfile="GalaxyGUI.cpp" bodystart="74" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1a0d39db7c51cd1c20f9912e3020346b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::setImage</definition>
+        <argsstring>(string imageFile)</argsstring>
+        <name>setImage</name>
+        <param>
+          <type>string</type>
+          <declname>imageFile</declname>
+        </param>
+        <briefdescription>
+<para>Set the background image and redraws the simulation window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imageFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file name of a background image. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="68" column="10" bodyfile="GalaxyGUI.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1a9d5b08aac681145115c3e2be23aedfa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::createButtons</definition>
+        <argsstring>()</argsstring>
+        <name>createButtons</name>
+        <briefdescription>
+<para>Create Button objects and click/timer listeners for each button. The buttons created include: SET MAP, START, STOP, and RESET. Certain buttons are disabled when appropriate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="76" column="10" bodyfile="GalaxyGUI.cpp" bodystart="91" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1a77e802fceefeee81ea6af362e9c1496a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::createSingleRadio</definition>
+        <argsstring>(string text, GRadioButton **nameOut)</argsstring>
+        <name>createSingleRadio</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>GRadioButton **</type>
+          <declname>nameOut</declname>
+        </param>
+        <briefdescription>
+<para>Create a single radio button object to control the background image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label of radioButton. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nameOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An address of a pointer to a radio button. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="84" column="10" bodyfile="GalaxyGUI.cpp" bodystart="138" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1a2520d2e558b23f560caaa85c8ce6dfbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::createRadioButtons</definition>
+        <argsstring>()</argsstring>
+        <name>createRadioButtons</name>
+        <briefdescription>
+<para>Create radio button objects to control the background image. This method also sets up a timer listener to check which radio button (background) is selected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="92" column="10" bodyfile="GalaxyGUI.cpp" bodystart="146" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1a089cbe5ad71bc5a93b40dc31b144091d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::createMapChooser</definition>
+        <argsstring>()</argsstring>
+        <name>createMapChooser</name>
+        <briefdescription>
+<para>Create a dropdown menu object that allows to change the map file used to initialize the grid on start. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="99" column="10" bodyfile="GalaxyGUI.cpp" bodystart="163" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1a1e3a116b30b5f9b4b3704086848125de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>Iterates the simulation by one move. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="105" column="10" bodyfile="GalaxyGUI.cpp" bodystart="171" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1ae40bcb104b8d3e4d4fbadf397e2c457f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::redraw</definition>
+        <argsstring>()</argsstring>
+        <name>redraw</name>
+        <briefdescription>
+<para>Redraws the objects of the simulation window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="111" column="10" bodyfile="GalaxyGUI.cpp" bodystart="178" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1ab899eada60b91c71ec3c16a429e94126" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::drawSpaceObject</definition>
+        <argsstring>(SpaceObject *spaceObject, int row, int col)</argsstring>
+        <name>drawSpaceObject</name>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>spaceObject</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Draws a single <ref refid="class_space_object" kindref="compound">SpaceObject</ref> (planet or star) and the the occupants. Occupants are represented by the first letter of their alien race name and a percentage representing fullness of the planet with respect to max population of the planet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spaceObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Either a star or planet. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertical positioning in the simulation window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Horizontal positioning in the simulation window. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="123" column="10" bodyfile="GalaxyGUI.cpp" bodystart="202" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1acf1af1bd9cafbe92b292b2c9add38b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::drawSpaceship</definition>
+        <argsstring>(SpaceObject *spaceship, int row, int col)</argsstring>
+        <name>drawSpaceship</name>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>spaceship</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Draws a single <ref refid="class_spaceship" kindref="compound">Spaceship</ref> facing the direction of its last move. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spaceship</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A spaceship. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertical positioning in the simulation window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Horizontal positioning in the simulation window. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="132" column="10" bodyfile="GalaxyGUI.cpp" bodystart="226" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1aace9dad5be305079aae489e17985bb50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GalaxyGUI::drawExplosion</definition>
+        <argsstring>(SpaceObject *explosion, int row, int col)</argsstring>
+        <name>drawExplosion</name>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>explosion</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Draws an explosion, which occurs when a spaceship loses a battle. Explosions start at a peak stage (image size) and reduce in stage (image size) over nine simulation iterations. This results in an &quot;animated&quot; explosion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>explosion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An explosion. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertical positioning in the simulation window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Horizontal positioning in the simulation window. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="144" column="10" bodyfile="GalaxyGUI.cpp" bodystart="233" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_g_u_i_1a3c636ca27dc27dd5d44d07acc06c7537" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string GalaxyGUI::getShipImage</definition>
+        <argsstring>(string name, Moves lastMove) const</argsstring>
+        <name>getShipImage</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>Moves</type>
+          <declname>lastMove</declname>
+        </param>
+        <briefdescription>
+<para>Get the filename for the image of a spaceship. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alien type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lastMove</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last move of a spaceship used to determine which spaceship image to draw. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string A filename. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GalaxyGUI.h" line="154" column="12" bodyfile="GalaxyGUI.cpp" bodystart="245" bodyend="247"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="GalaxyGUI.h" line="21" column="1" bodyfile="GalaxyGUI.h" bodystart="21" bodyend="155"/>
+    <listofallmembers>
+      <member refid="class_galaxy_g_u_i_1a701321c21b6e4bf097a35750d417dcde" prot="private" virt="non-virtual"><scope>GalaxyGUI</scope><name>backgroundImage</name></member>
+      <member refid="class_galaxy_g_u_i_1a703991a6b66717767f51b381f7d45859" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>checkImage</name></member>
+      <member refid="class_galaxy_g_u_i_1a9d5b08aac681145115c3e2be23aedfa2" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>createButtons</name></member>
+      <member refid="class_galaxy_g_u_i_1a089cbe5ad71bc5a93b40dc31b144091d" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>createMapChooser</name></member>
+      <member refid="class_galaxy_g_u_i_1a2520d2e558b23f560caaa85c8ce6dfbf" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>createRadioButtons</name></member>
+      <member refid="class_galaxy_g_u_i_1a77e802fceefeee81ea6af362e9c1496a" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>createSingleRadio</name></member>
+      <member refid="class_galaxy_g_u_i_1a232829bfe541898d855fcfd76d419226" prot="private" virt="non-virtual"><scope>GalaxyGUI</scope><name>currentTurn</name></member>
+      <member refid="class_galaxy_g_u_i_1aace9dad5be305079aae489e17985bb50" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>drawExplosion</name></member>
+      <member refid="class_galaxy_g_u_i_1ab899eada60b91c71ec3c16a429e94126" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>drawSpaceObject</name></member>
+      <member refid="class_galaxy_g_u_i_1acf1af1bd9cafbe92b292b2c9add38b66" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>drawSpaceship</name></member>
+      <member refid="class_galaxy_g_u_i_1a28a10756d13503fbc263dfafca2a258b" prot="private" virt="non-virtual"><scope>GalaxyGUI</scope><name>galaxy</name></member>
+      <member refid="class_galaxy_g_u_i_1abe98bc182652186248dc55385ec6a5f2" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>GalaxyGUI</name></member>
+      <member refid="class_galaxy_g_u_i_1a3c636ca27dc27dd5d44d07acc06c7537" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>getShipImage</name></member>
+      <member refid="class_galaxy_g_u_i_1a2f63364b4b218b821365d74f6c195bce" prot="private" virt="non-virtual"><scope>GalaxyGUI</scope><name>mapFiles</name></member>
+      <member refid="class_galaxy_g_u_i_1afccf0c13ab22cb0c72c3438ffa727f47" prot="private" virt="non-virtual"><scope>GalaxyGUI</scope><name>moveStrings</name></member>
+      <member refid="class_galaxy_g_u_i_1ae40bcb104b8d3e4d4fbadf397e2c457f" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>redraw</name></member>
+      <member refid="class_galaxy_g_u_i_1a0d39db7c51cd1c20f9912e3020346b9e" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>setImage</name></member>
+      <member refid="class_galaxy_g_u_i_1ac37f8c9ec31ce172870eeee1791ca152" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>setMapFile</name></member>
+      <member refid="class_galaxy_g_u_i_1a3f36ce2bd194054584ddffd01b2b9bfa" prot="private" virt="non-virtual"><scope>GalaxyGUI</scope><name>squareSize</name></member>
+      <member refid="class_galaxy_g_u_i_1a1e3a116b30b5f9b4b3704086848125de" prot="public" virt="non-virtual"><scope>GalaxyGUI</scope><name>tick</name></member>
+      <member refid="class_galaxy_g_u_i_1a4e07057e04bf99df15d4b2b8f1db3b6d" prot="private" virt="non-virtual"><scope>GalaxyGUI</scope><name>window</name></member>
+      <member refid="class_galaxy_g_u_i_1a86f30050e98194957c5bd74bca977493" prot="private" virt="non-virtual"><scope>GalaxyGUI</scope><name>windowSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

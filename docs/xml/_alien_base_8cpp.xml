@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_alien_base_8cpp" kind="file" language="C++">
+    <compoundname>AlienBase.cpp</compoundname>
+    <includes refid="_alien_base_8h" local="yes">AlienBase.h</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>AlienBase.h</label>
+        <link refid="_alien_base_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>AlienBase.cpp</label>
+        <link refid="_alien_base_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="AlienBase.cpp"/>
+  </compounddef>
+</doxygen>

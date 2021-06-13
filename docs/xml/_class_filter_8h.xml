@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_class_filter_8h" kind="file" language="C++">
+    <compoundname>ClassFilter.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="_space_object_8h" local="yes">SpaceObject.h</includes>
+    <includes refid="_alien_base_8h" local="yes">AlienBase.h</includes>
+    <includedby refid="_class_filter_8cpp" local="yes">ClassFilter.cpp</includedby>
+    <includedby refid="_event_handler_8cpp" local="yes">EventHandler.cpp</includedby>
+    <includedby refid="_galaxy_8cpp" local="yes">Galaxy.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>Orbits.h</label>
+        <link refid="_orbits_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SpaceObject.h</label>
+        <link refid="_space_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>AlienBase.h</label>
+        <link refid="_alien_base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>ClassFilter.h</label>
+        <link refid="_class_filter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ClassFilter.cpp</label>
+        <link refid="_class_filter_8cpp"/>
+      </node>
+      <node id="3">
+        <label>EventHandler.cpp</label>
+        <link refid="_event_handler_8cpp"/>
+      </node>
+      <node id="1">
+        <label>ClassFilter.h</label>
+        <link refid="_class_filter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Galaxy.cpp</label>
+        <link refid="_galaxy_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_class_filter_8h_1a46f0acb169ff176eefb6e0ac6695072a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeSpaceObject</definition>
+        <argsstring>(string type, SpaceObject **spaceObject, Movesets moveset)</argsstring>
+        <name>initializeSpaceObject</name>
+        <param>
+          <type>string</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> **</type>
+          <declname>spaceObject</declname>
+        </param>
+        <param>
+          <type>Movesets</type>
+          <declname>moveset</declname>
+        </param>
+        <briefdescription>
+<para>Creates a <ref refid="class_space_object" kindref="compound">SpaceObject</ref> with a given type and moveset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type is a string fetched from getName() member method, which represents the class of the <ref refid="class_space_object" kindref="compound">SpaceObject</ref> passed to this method. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spaceObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a SpaceObject* to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>moveset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A predetermined orbit path defined by an enum Movesets. Options include: {STATIONARY, CLOSE, MEDIUM, RANDOM, CLOSECC, MEDIUMSLOW, FAR}. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ClassFilter.h" line="30" column="6" bodyfile="ClassFilter.cpp" bodystart="27" bodyend="45" declfile="ClassFilter.h" declline="30" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_class_filter_8h_1a9b634e100c608c4fc5522d7f0b7987c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeAlienBase</definition>
+        <argsstring>(string type, AlienBase **alienBase)</argsstring>
+        <name>initializeAlienBase</name>
+        <param>
+          <type>string</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> **</type>
+          <declname>alienBase</declname>
+        </param>
+        <briefdescription>
+<para>Creates a <ref refid="class_alien_base" kindref="compound">AlienBase</ref> with a given type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type is a string fetched from getName() member method, which represents the class of the <ref refid="class_alien_base" kindref="compound">AlienBase</ref> passed to this method. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spaceObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a AlienBase* to initialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ClassFilter.h" line="40" column="6" bodyfile="ClassFilter.cpp" bodystart="47" bodyend="61" declfile="ClassFilter.h" declline="40" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility functions for creating new instances of aliens and space objects. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="ClassFilter.h"/>
+  </compounddef>
+</doxygen>

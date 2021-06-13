@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_saveela_8h" kind="file" language="C++">
+    <compoundname>Saveela.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="_alien_base_8h" local="yes">AlienBase.h</includes>
+    <includedby refid="_class_filter_8cpp" local="yes">ClassFilter.cpp</includedby>
+    <includedby refid="_saveela_8cpp" local="yes">Saveela.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Saveela.h</label>
+        <link refid="_saveela_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>AlienBase.h</label>
+        <link refid="_alien_base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>Saveela.h</label>
+        <link refid="_saveela_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ClassFilter.cpp</label>
+        <link refid="_class_filter_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Saveela.cpp</label>
+        <link refid="_saveela_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_saveela" prot="public">Saveela</innerclass>
+    <briefdescription>
+<para>Bare alien class. Did not have time to implement differences. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="Saveela.h"/>
+  </compounddef>
+</doxygen>

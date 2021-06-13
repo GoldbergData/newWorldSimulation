@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_explosion_8h" kind="file" language="C++">
+    <compoundname>Explosion.h</compoundname>
+    <includes refid="_space_object_8h" local="yes">SpaceObject.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="_explosion_8cpp" local="yes">Explosion.cpp</includedby>
+    <includedby refid="_galaxy_8cpp" local="yes">Galaxy.cpp</includedby>
+    <includedby refid="_galaxy_g_u_i_8cpp" local="yes">GalaxyGUI.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>Orbits.h</label>
+        <link refid="_orbits_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceObject.h</label>
+        <link refid="_space_object_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>Explosion.h</label>
+        <link refid="_explosion_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Explosion.cpp</label>
+        <link refid="_explosion_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Galaxy.cpp</label>
+        <link refid="_galaxy_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Explosion.h</label>
+        <link refid="_explosion_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GalaxyGUI.cpp</label>
+        <link refid="_galaxy_g_u_i_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_explosion" prot="public">Explosion</innerclass>
+    <briefdescription>
+<para>Explosions occur when a spaceship loses a battle (either by another spaceship or by occupants of a planet). </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="Explosion.h"/>
+  </compounddef>
+</doxygen>

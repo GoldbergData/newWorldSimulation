@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Orbits.h file | CS 132, Spring 2021 newWorldSimulation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark.compiled.css" />
+  <link rel="stylesheet" href="m-dark.documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">CS 132, Spring 2021 <span class="m-thin">newWorldSimulation</span></a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="2">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          Orbits.h <span class="m-thin">file</span>
+        </h1>
+        <p>Utility enums and vectors used for handling object movements.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#enum-members">Enums</a></li>
+                <li><a href="#func-members">Functions</a></li>
+                <li><a href="#var-members">Variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<aside class="m-note m-default"><h4>Author</h4><p>John Nguyen, Joshua Goldberg (<a href="mailto:jvn1567@gmail.com">jvn1567@gmail.com</a>, <a href="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</a>)</p></aside><aside class="m-note m-default"><h4>Version</h4><p>0.1</p></aside><aside class="m-note m-default"><h4>Date</h4><p>2021-06-12</p></aside><aside class="m-note m-default"><h4>Copyright</h4><p>Copyright (c) 2021</p></aside>
+        <section id="enum-members">
+          <h2><a href="#enum-members">Enums</a></h2>
+          <dl class="m-doc">
+            <dt id="a10c2d1d3d5027b3b451da70c1b497b32">
+              <span class="m-doc-wrap-bumper">enum <a href="#a10c2d1d3d5027b3b451da70c1b497b32" class="m-doc-self">Movesets</a> { </span><span class="m-doc-wrap"><a href="#a10c2d1d3d5027b3b451da70c1b497b32ac84bd0ee013c388bd7cc8139be7206a2" class="m-doc">STATIONARY</a>,
+              <a href="#a10c2d1d3d5027b3b451da70c1b497b32a685f73194ad125cbc784c3210cdb3449" class="m-doc">CLOSE</a>,
+              <a href="#a10c2d1d3d5027b3b451da70c1b497b32a5340ec7ecef6cc3886684a3bd3450d64" class="m-doc">MEDIUM</a>,
+              <a href="#a10c2d1d3d5027b3b451da70c1b497b32aa2b65445a3a16f164c5e811064d75726" class="m-doc">RANDOM</a>,
+              <a href="#a10c2d1d3d5027b3b451da70c1b497b32a0932f4f7a512d5a5d57b7fb6885e7b0f" class="m-doc">CLOSECC</a>,
+              <a href="#a10c2d1d3d5027b3b451da70c1b497b32a809197e8751771c17f8d367c418d247d" class="m-doc">MEDIUMSLOW</a>,
+              <a href="#a10c2d1d3d5027b3b451da70c1b497b32a4a74b534d03ab99e48c6fee5bb129cab" class="m-doc">FAR</a> }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ace1e3431f540c4c67e72907ad57e9b8a">
+              <span class="m-doc-wrap-bumper">enum <a href="#ace1e3431f540c4c67e72907ad57e9b8a" class="m-doc-self">Moves</a> { </span><span class="m-doc-wrap"><a href="#ace1e3431f540c4c67e72907ad57e9b8aa2159ffbd3a68037511ab5ab4dd35ace7" class="m-doc">CENTER</a>,
+              <a href="#ace1e3431f540c4c67e72907ad57e9b8aad0611de6f28d4a9c9eac959f5344698e" class="m-doc">NORTH</a>,
+              <a href="#ace1e3431f540c4c67e72907ad57e9b8aab5b3793b961949c817c7c0d99c05dad7" class="m-doc">EAST</a>,
+              <a href="#ace1e3431f540c4c67e72907ad57e9b8aa8ef5c0bce69283a9986011a63eea8a6b" class="m-doc">SOUTH</a>,
+              <a href="#ace1e3431f540c4c67e72907ad57e9b8aae9449e8683a8199dad36b07a63b2f523" class="m-doc">WEST</a>,
+              <a href="#ace1e3431f540c4c67e72907ad57e9b8aaa6671505783298e4cb967931c1c1ac5b" class="m-doc">NORTHEAST</a>,
+              <a href="#ace1e3431f540c4c67e72907ad57e9b8aac8aee466c121a3c3c942f58e1d8864d4" class="m-doc">NORTHWEST</a>,
+              <a href="#ace1e3431f540c4c67e72907ad57e9b8aa16c2c7abfbd3bad3343b0dcaa858bb49" class="m-doc">SOUTHEAST</a>,
+              <a href="#ace1e3431f540c4c67e72907ad57e9b8aa6aa90951b336be999de204e61dd366d4" class="m-doc">SOUTHWEST</a> }</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="func-members">
+          <h2><a href="#func-members">Functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a6a6a522373b50b4ae018aee15659dcf9" class="m-doc">getMove</a>(</span><span class="m-doc-wrap">long currentTurn,
+              Movesets moveSet) -&gt; Moves</span>
+            </dt>
+            <dd>Get the move direction.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#af419f555abd9e28a8579376cb84f2ecc" class="m-doc">updateCoordinates</a>(</span><span class="m-doc-wrap">int&amp; row,
+              int&amp; col,
+              Moves move,
+              int gridSize)</span>
+            </dt>
+            <dd>Updates the coordinates based on the specified move.</dd>
+          </dl>
+        </section>
+        <section id="var-members">
+          <h2><a href="#var-members">Variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a0a397773557e4043d4ef845d9bbd178f">
+              const vector&lt;Moves&gt; <a href="#a0a397773557e4043d4ef845d9bbd178f" class="m-doc-self">circle</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aadaa61d201a0f180d34a6c587faaeece">
+              const vector&lt;Moves&gt; <a href="#aadaa61d201a0f180d34a6c587faaeece" class="m-doc-self">circleCC</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a6a6a522373b50b4ae018aee15659dcf9"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">Moves </span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6a6a522373b50b4ae018aee15659dcf9" class="m-doc-self">getMove</a>(</span><span class="m-doc-wrap">long currentTurn,
+              Movesets moveSet)</span></span>
+            </h3>
+            <p>Get the move direction.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">currentTurn</td>
+                  <td>Current iteration in the simulation.</td>
+                </tr>
+                <tr>
+                  <td>moveSet</td>
+                  <td>Characterizes orbit path.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Moves Direction.</td>
+                </tr>
+              </tfoot>
+            </table>
+<aside class="m-note m-success"><h4>Precondition</h4><p>Planets are placed in the top right corner of their orbits.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="af419f555abd9e28a8579376cb84f2ecc"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void </span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af419f555abd9e28a8579376cb84f2ecc" class="m-doc-self">updateCoordinates</a>(</span><span class="m-doc-wrap">int&amp; row,
+              int&amp; col,
+              Moves move,
+              int gridSize)</span></span>
+            </h3>
+            <p>Updates the coordinates based on the specified move.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">row</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>col</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>move</td>
+                  <td>Direction.</td>
+                </tr>
+                <tr>
+                  <td>gridSize</td>
+                  <td>Size of grid to handle off-mapping (when an object moves past the boundaries, it appears on the other side of the grid).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>CS 132, Spring 2021 newWorldSimulation. Created with <a href="https://doxygen.org/">Doxygen</a> 1.9.1 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

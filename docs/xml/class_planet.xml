@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_planet" kind="class" language="C++" prot="public">
+    <compoundname>Planet</compoundname>
+    <basecompoundref refid="class_space_object" prot="public" virt="non-virtual">SpaceObject</basecompoundref>
+    <derivedcompoundref refid="class_greenhouse" prot="public" virt="non-virtual">Greenhouse</derivedcompoundref>
+    <derivedcompoundref refid="class_ice_world" prot="public" virt="non-virtual">IceWorld</derivedcompoundref>
+    <derivedcompoundref refid="class_purple_gas" prot="public" virt="non-virtual">PurpleGas</derivedcompoundref>
+    <derivedcompoundref refid="class_rock_slide" prot="public" virt="non-virtual">RockSlide</derivedcompoundref>
+    <derivedcompoundref refid="class_toxic_wasteland" prot="public" virt="non-virtual">ToxicWasteland</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_planet_1a87de6f2d924e07975c6f8384a7ddaaea" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> *</type>
+        <definition>AlienBase* Planet::occupant</definition>
+        <argsstring></argsstring>
+        <name>occupant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="22" column="15" bodyfile="Planet.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_planet_1a50e8db8789932ba4513454750e1f947e" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Planet::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="23" column="10" bodyfile="Planet.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_planet_1a063bf75b28301b4042d3cb35b96683c5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Planet::baseTemperature</definition>
+        <argsstring></argsstring>
+        <name>baseTemperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="25" column="9" bodyfile="Planet.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_planet_1a869b3c7f4cb0398d28dc25664bc45073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Planet::Planet</definition>
+        <argsstring>(Movesets moveset)</argsstring>
+        <name>Planet</name>
+        <param>
+          <type>Movesets</type>
+          <declname>moveset</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_planet" kindref="compound">Planet</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>moveset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orbital path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="32" column="5" bodyfile="Planet.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_planet_1a8a99d7aa6cf6ae17b3557f284aa0b983" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long Planet::getCapacity</definition>
+        <argsstring>() const</argsstring>
+        <name>getCapacity</name>
+        <briefdescription>
+<para>Get the population capacity of the planet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>long Population capacity. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="39" column="10" bodyfile="Planet.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_planet_1a59c5ec990d712d68e0eac74e63ee2d8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Planet::getTemperature</definition>
+        <argsstring>() const</argsstring>
+        <name>getTemperature</name>
+        <briefdescription>
+<para>Get the Temperature object. Currently not used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int Temperature. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="46" column="9" bodyfile="Planet.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_planet_1a3e80a10130f33b5e74b869f73f108f68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Planet::isHabitable</definition>
+        <argsstring>() const</argsstring>
+        <name>isHabitable</name>
+        <reimplements refid="class_space_object_1aa687c78e50a36b439d529d294fe5a753">isHabitable</reimplements>
+        <briefdescription>
+<para>Determines if a planet is habitable, which is always true. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Habitable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="53" column="18" bodyfile="Planet.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_planet_1ad75da2be32f572291190b1f6e0b9988d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Planet::setOccupant</definition>
+        <argsstring>(AlienBase *occupant)</argsstring>
+        <name>setOccupant</name>
+        <param>
+          <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> *</type>
+          <declname>occupant</declname>
+        </param>
+        <briefdescription>
+<para>Set the alien occupants of the planet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>occupant</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alien. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="60" column="10" bodyfile="Planet.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_planet_1a391e4a6fba35535c7bdf9e60a69acdf0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> *</type>
+        <definition>AlienBase * Planet::getOccupant</definition>
+        <argsstring>() const</argsstring>
+        <name>getOccupant</name>
+        <briefdescription>
+<para>Get the alien occupants of the planet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>AlienBase* Alien. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="67" column="15" bodyfile="Planet.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_planet_1a2bb1e03e4889ec74d09d4172535b253f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int Planet::getHazard</definition>
+        <argsstring>() const</argsstring>
+        <name>getHazard</name>
+        <reimplementedby refid="class_greenhouse_1a4c0d2f82f67a65f16932648392558f05">getHazard</reimplementedby>
+        <reimplementedby refid="class_ice_world_1a5c31d6fe79c6db4d059abe288e1958d8">getHazard</reimplementedby>
+        <reimplementedby refid="class_purple_gas_1a9e236a0e424af52c43ee9fdbdf619f9d">getHazard</reimplementedby>
+        <reimplementedby refid="class_rock_slide_1a16c75d8d4b3644ec9f41f9c481f2461a">getHazard</reimplementedby>
+        <reimplementedby refid="class_toxic_wasteland_1a31348fcce53153d23247b10b0eeab666">getHazard</reimplementedby>
+        <briefdescription>
+<para>Get the hazard of the planet, which reduces population growth of the occupants on the planet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int Hazard. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="75" column="17" bodyfile="Planet.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_planet_1afca216f7779d94e5cff0e731cfd8e22d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int Planet::getBonus</definition>
+        <argsstring>() const</argsstring>
+        <name>getBonus</name>
+        <briefdescription>
+<para>Get the bonus of the planet, which increases population growth of the occupants on the planet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int Bonus. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="83" column="17" bodyfile="Planet.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_planet_1a71b53477ffa0201f2096bcd9f30f9d79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string Planet::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <reimplements refid="class_space_object_1a13f951c4ab7a033c6bf023e469304381">getName</reimplements>
+        <reimplementedby refid="class_greenhouse_1a0ec819d4b5b627b8a7fe7fa4c0a9129b">getName</reimplementedby>
+        <reimplementedby refid="class_ice_world_1ae07dc2d281358a0ea33560374dc892a6">getName</reimplementedby>
+        <reimplementedby refid="class_purple_gas_1ae0d987946a535897c4734a045477e909">getName</reimplementedby>
+        <reimplementedby refid="class_rock_slide_1a3cdfe346bb2a6bd142e46e3777107274">getName</reimplementedby>
+        <reimplementedby refid="class_toxic_wasteland_1a2a818c25226021411ecaced84923e018">getName</reimplementedby>
+        <briefdescription>
+<para>Get the name of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string Name of the class. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Planet.h" line="90" column="20" bodyfile="Planet.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>ToxicWasteland</label>
+        <link refid="class_toxic_wasteland"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RockSlide</label>
+        <link refid="class_rock_slide"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>IceWorld</label>
+        <link refid="class_ice_world"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Greenhouse</label>
+        <link refid="class_greenhouse"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PurpleGas</label>
+        <link refid="class_purple_gas"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+      <node id="1">
+        <label>Planet</label>
+        <link refid="class_planet"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+      <node id="1">
+        <label>Planet</label>
+        <link refid="class_planet"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Planet.h" line="20" column="1" bodyfile="Planet.h" bodystart="20" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_planet_1a063bf75b28301b4042d3cb35b96683c5" prot="private" virt="non-virtual"><scope>Planet</scope><name>baseTemperature</name></member>
+      <member refid="class_planet_1a50e8db8789932ba4513454750e1f947e" prot="private" virt="non-virtual"><scope>Planet</scope><name>capacity</name></member>
+      <member refid="class_planet_1afca216f7779d94e5cff0e731cfd8e22d" prot="public" virt="virtual"><scope>Planet</scope><name>getBonus</name></member>
+      <member refid="class_planet_1a8a99d7aa6cf6ae17b3557f284aa0b983" prot="public" virt="non-virtual"><scope>Planet</scope><name>getCapacity</name></member>
+      <member refid="class_planet_1a2bb1e03e4889ec74d09d4172535b253f" prot="public" virt="virtual"><scope>Planet</scope><name>getHazard</name></member>
+      <member refid="class_space_object_1a9fe801118d2b1c48183dabf53b92bb30" prot="public" virt="non-virtual"><scope>Planet</scope><name>getMoveset</name></member>
+      <member refid="class_planet_1a71b53477ffa0201f2096bcd9f30f9d79" prot="public" virt="virtual"><scope>Planet</scope><name>getName</name></member>
+      <member refid="class_planet_1a391e4a6fba35535c7bdf9e60a69acdf0" prot="public" virt="non-virtual"><scope>Planet</scope><name>getOccupant</name></member>
+      <member refid="class_planet_1a59c5ec990d712d68e0eac74e63ee2d8c" prot="public" virt="non-virtual"><scope>Planet</scope><name>getTemperature</name></member>
+      <member refid="class_planet_1a3e80a10130f33b5e74b869f73f108f68" prot="public" virt="virtual"><scope>Planet</scope><name>isHabitable</name></member>
+      <member refid="class_planet_1a87de6f2d924e07975c6f8384a7ddaaea" prot="private" virt="non-virtual"><scope>Planet</scope><name>occupant</name></member>
+      <member refid="class_planet_1a869b3c7f4cb0398d28dc25664bc45073" prot="public" virt="non-virtual"><scope>Planet</scope><name>Planet</name></member>
+      <member refid="class_planet_1ad75da2be32f572291190b1f6e0b9988d" prot="public" virt="non-virtual"><scope>Planet</scope><name>setOccupant</name></member>
+      <member refid="class_space_object_1ada1c7e18d754a1b5d3aed74728eb9ae1" prot="public" virt="non-virtual"><scope>Planet</scope><name>SpaceObject</name></member>
+      <member refid="class_space_object_1a75db7c70ae486ab5722d915debb580eb" prot="public" virt="non-virtual"><scope>Planet</scope><name>SpaceObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_saveela" kind="class" language="C++" prot="public">
+    <compoundname>Saveela</compoundname>
+    <basecompoundref refid="class_alien_base" prot="public" virt="non-virtual">AlienBase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_saveela_1a538cc08a66ddbb3b75a8938d81a2a6f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Saveela::Saveela</definition>
+        <argsstring>()</argsstring>
+        <name>Saveela</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Saveela.h" line="22" column="5" bodyfile="Saveela.cpp" bodystart="14" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Saveela</label>
+        <link refid="class_saveela"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AlienBase</label>
+        <link refid="class_alien_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Saveela</label>
+        <link refid="class_saveela"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AlienBase</label>
+        <link refid="class_alien_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="Saveela.h" line="19" column="1" bodyfile="Saveela.h" bodystart="19" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_alien_base_1ad5f8781b09306ea415466824824867d8" prot="public" virt="non-virtual"><scope>Saveela</scope><name>AlienBase</name></member>
+      <member refid="class_alien_base_1a401cc8094ef586ffa474b54b623dcce9" prot="public" virt="non-virtual"><scope>Saveela</scope><name>AlienBase</name></member>
+      <member refid="class_alien_base_1a06708036adc74aa50e2440c9a1a9a1c6" prot="public" virt="virtual"><scope>Saveela</scope><name>getCooldown</name></member>
+      <member refid="class_alien_base_1ac3c489ced3939e38895454afd09d4e4b" prot="public" virt="virtual"><scope>Saveela</scope><name>getIncrease</name></member>
+      <member refid="class_alien_base_1ad54dcd1159a008fa098f576ade3699b5" prot="public" virt="virtual"><scope>Saveela</scope><name>getName</name></member>
+      <member refid="class_alien_base_1a4f63246794c4bb66f74d2ddee58cab33" prot="public" virt="virtual"><scope>Saveela</scope><name>getPopulation</name></member>
+      <member refid="class_alien_base_1aed5e15bfa1aa08b23d108051dfac4517" prot="public" virt="virtual"><scope>Saveela</scope><name>reduceCooldown</name></member>
+      <member refid="class_alien_base_1a04acebca59daf2e3137daa80da6a859e" prot="public" virt="virtual"><scope>Saveela</scope><name>resetCooldown</name></member>
+      <member refid="class_saveela_1a538cc08a66ddbb3b75a8938d81a2a6f5" prot="public" virt="non-virtual"><scope>Saveela</scope><name>Saveela</name></member>
+      <member refid="class_alien_base_1a4cc26acbd74caf53215e27fb86cda384" prot="public" virt="virtual"><scope>Saveela</scope><name>setPopulation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

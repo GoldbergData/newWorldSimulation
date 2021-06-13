@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_star" kind="class" language="C++" prot="public">
+    <compoundname>Star</compoundname>
+    <basecompoundref refid="class_space_object" prot="public" virt="non-virtual">SpaceObject</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_star_1a4437117e41b50e60553a1919ea110d19" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Star::temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Star.h" line="23" column="9" bodyfile="Star.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_star_1a3078324b2a606a8c248984f166700069" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Star::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+<para>Image used to represent the star. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Star.h" line="28" column="12" bodyfile="Star.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_star_1ac174c691c269196c47324a13c3c9f903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Star::Star</definition>
+        <argsstring>()</argsstring>
+        <name>Star</name>
+        <briefdescription>
+<para>Construct a new <ref refid="class_star" kindref="compound">Star</ref> object using a random star image. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Star.h" line="34" column="5" bodyfile="Star.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_star_1a52afd3d0ca11a4e451ab84d2c6411d52" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Star::getTemperature</definition>
+        <argsstring>() const</argsstring>
+        <name>getTemperature</name>
+        <briefdescription>
+<para>Get the Temperature object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Star.h" line="41" column="9" bodyfile="Star.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_star_1acf2ce02424766b63f58d582672a1cb23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string Star::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <reimplements refid="class_space_object_1a13f951c4ab7a033c6bf023e469304381">getName</reimplements>
+        <briefdescription>
+<para>Get the name of the object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Star.h" line="48" column="20" bodyfile="Star.cpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_star_1a56656ec995f522ee3938270c3d62f153" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string Star::getFilename</definition>
+        <argsstring>() const</argsstring>
+        <name>getFilename</name>
+        <briefdescription>
+<para>Get the Filename of the object, which is used as the star&apos;s image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string Name of image file for the star. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Star.h" line="55" column="20" bodyfile="Star.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Star</label>
+        <link refid="class_star"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Star</label>
+        <link refid="class_star"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="Star.h" line="20" column="1" bodyfile="Star.h" bodystart="20" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_star_1a3078324b2a606a8c248984f166700069" prot="private" virt="non-virtual"><scope>Star</scope><name>filename</name></member>
+      <member refid="class_star_1a56656ec995f522ee3938270c3d62f153" prot="public" virt="virtual"><scope>Star</scope><name>getFilename</name></member>
+      <member refid="class_space_object_1a9fe801118d2b1c48183dabf53b92bb30" prot="public" virt="non-virtual"><scope>Star</scope><name>getMoveset</name></member>
+      <member refid="class_star_1acf2ce02424766b63f58d582672a1cb23" prot="public" virt="virtual"><scope>Star</scope><name>getName</name></member>
+      <member refid="class_star_1a52afd3d0ca11a4e451ab84d2c6411d52" prot="public" virt="non-virtual"><scope>Star</scope><name>getTemperature</name></member>
+      <member refid="class_space_object_1aa687c78e50a36b439d529d294fe5a753" prot="public" virt="virtual"><scope>Star</scope><name>isHabitable</name></member>
+      <member refid="class_space_object_1ada1c7e18d754a1b5d3aed74728eb9ae1" prot="public" virt="non-virtual"><scope>Star</scope><name>SpaceObject</name></member>
+      <member refid="class_space_object_1a75db7c70ae486ab5722d915debb580eb" prot="public" virt="non-virtual"><scope>Star</scope><name>SpaceObject</name></member>
+      <member refid="class_star_1ac174c691c269196c47324a13c3c9f903" prot="public" virt="non-virtual"><scope>Star</scope><name>Star</name></member>
+      <member refid="class_star_1a4437117e41b50e60553a1919ea110d19" prot="private" virt="non-virtual"><scope>Star</scope><name>temperature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

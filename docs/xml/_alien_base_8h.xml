@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_alien_base_8h" kind="file" language="C++">
+    <compoundname>AlienBase.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="_alien_base_8cpp" local="yes">AlienBase.cpp</includedby>
+    <includedby refid="_class_filter_8h" local="yes">ClassFilter.h</includedby>
+    <includedby refid="_event_handler_8h" local="yes">EventHandler.h</includedby>
+    <includedby refid="_galaxy_8cpp" local="yes">Galaxy.cpp</includedby>
+    <includedby refid="_galaxy_8h" local="yes">Galaxy.h</includedby>
+    <includedby refid="_patawlian_8h" local="yes">Patawlian.h</includedby>
+    <includedby refid="_pink_goblin_8h" local="yes">PinkGoblin.h</includedby>
+    <includedby refid="_planet_8h" local="yes">Planet.h</includedby>
+    <includedby refid="_saveela_8h" local="yes">Saveela.h</includedby>
+    <includedby refid="_spaceship_8h" local="yes">Spaceship.h</includedby>
+    <includedby refid="_zed_8h" local="yes">Zed.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>AlienBase.h</label>
+        <link refid="_alien_base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18">
+        <label>Greenhouse.h</label>
+        <link refid="_greenhouse_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Planet.cpp</label>
+        <link refid="_planet_8cpp"/>
+      </node>
+      <node id="13">
+        <label>Patawlian.cpp</label>
+        <link refid="_patawlian_8cpp"/>
+      </node>
+      <node id="28">
+        <label>Saveela.h</label>
+        <link refid="_saveela_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AlienBase.h</label>
+        <link refid="_alien_base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="26">
+        <label>ToxicWasteland.cpp</label>
+        <link refid="_toxic_wasteland_8cpp"/>
+      </node>
+      <node id="10">
+        <label>GalaxyGUI.h</label>
+        <link refid="_galaxy_g_u_i_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Planet.h</label>
+        <link refid="_planet_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>IceWorld.cpp</label>
+        <link refid="_ice_world_8cpp"/>
+      </node>
+      <node id="4">
+        <label>ClassFilter.cpp</label>
+        <link refid="_class_filter_8cpp"/>
+      </node>
+      <node id="32">
+        <label>Zed.h</label>
+        <link refid="_zed_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>EventHandler.h</label>
+        <link refid="_event_handler_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Spaceship.cpp</label>
+        <link refid="_spaceship_8cpp"/>
+      </node>
+      <node id="5">
+        <label>EventHandler.cpp</label>
+        <link refid="_event_handler_8cpp"/>
+      </node>
+      <node id="3">
+        <label>ClassFilter.h</label>
+        <link refid="_class_filter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>RockSlide.cpp</label>
+        <link refid="_rock_slide_8cpp"/>
+      </node>
+      <node id="6">
+        <label>Galaxy.cpp</label>
+        <link refid="_galaxy_8cpp"/>
+      </node>
+      <node id="2">
+        <label>AlienBase.cpp</label>
+        <link refid="_alien_base_8cpp"/>
+      </node>
+      <node id="17">
+        <label>Greenhouse.cpp</label>
+        <link refid="_greenhouse_8cpp"/>
+      </node>
+      <node id="12">
+        <label>Patawlian.h</label>
+        <link refid="_patawlian_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>PurpleGas.cpp</label>
+        <link refid="_purple_gas_8cpp"/>
+      </node>
+      <node id="23">
+        <label>PurpleGas.h</label>
+        <link refid="_purple_gas_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>GalaxyGUI.cpp</label>
+        <link refid="_galaxy_g_u_i_8cpp"/>
+      </node>
+      <node id="14">
+        <label>PinkGoblin.h</label>
+        <link refid="_pink_goblin_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>IceWorld.h</label>
+        <link refid="_ice_world_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Saveela.cpp</label>
+        <link refid="_saveela_8cpp"/>
+      </node>
+      <node id="15">
+        <label>PinkGoblin.cpp</label>
+        <link refid="_pink_goblin_8cpp"/>
+      </node>
+      <node id="8">
+        <label>Galaxy.h</label>
+        <link refid="_galaxy_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>RockSlide.h</label>
+        <link refid="_rock_slide_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Zed.cpp</label>
+        <link refid="_zed_8cpp"/>
+      </node>
+      <node id="30">
+        <label>Spaceship.h</label>
+        <link refid="_spaceship_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>ToxicWasteland.h</label>
+        <link refid="_toxic_wasteland_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_alien_base" prot="public">AlienBase</innerclass>
+    <briefdescription>
+<para>Superclass for all alien types. <ref refid="class_alien_base" kindref="compound">AlienBase</ref> has a default population of 10,000 and a increase of 10% for every iteration of the simulation. <ref refid="class_alien_base" kindref="compound">AlienBase</ref> occupies either a <ref refid="class_planet" kindref="compound">Planet</ref> or <ref refid="class_spaceship" kindref="compound">Spaceship</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="AlienBase.h"/>
+  </compounddef>
+</doxygen>

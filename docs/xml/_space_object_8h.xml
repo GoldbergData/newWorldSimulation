@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_space_object_8h" kind="file" language="C++">
+    <compoundname>SpaceObject.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="_orbits_8h" local="yes">Orbits.h</includes>
+    <includedby refid="_class_filter_8h" local="yes">ClassFilter.h</includedby>
+    <includedby refid="_event_handler_8h" local="yes">EventHandler.h</includedby>
+    <includedby refid="_explosion_8h" local="yes">Explosion.h</includedby>
+    <includedby refid="_galaxy_8cpp" local="yes">Galaxy.cpp</includedby>
+    <includedby refid="_galaxy_8h" local="yes">Galaxy.h</includedby>
+    <includedby refid="_galaxy_g_u_i_8cpp" local="yes">GalaxyGUI.cpp</includedby>
+    <includedby refid="_planet_8h" local="yes">Planet.h</includedby>
+    <includedby refid="_space_object_8cpp" local="yes">SpaceObject.cpp</includedby>
+    <includedby refid="_spaceship_8h" local="yes">Spaceship.h</includedby>
+    <includedby refid="_star_8h" local="yes">Star.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Orbits.h</label>
+        <link refid="_orbits_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SpaceObject.h</label>
+        <link refid="_space_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>Explosion.cpp</label>
+        <link refid="_explosion_8cpp"/>
+      </node>
+      <node id="15">
+        <label>Greenhouse.h</label>
+        <link refid="_greenhouse_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SpaceObject.h</label>
+        <link refid="_space_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Star.cpp</label>
+        <link refid="_star_8cpp"/>
+      </node>
+      <node id="18">
+        <label>Planet.cpp</label>
+        <link refid="_planet_8cpp"/>
+      </node>
+      <node id="12">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="23">
+        <label>ToxicWasteland.cpp</label>
+        <link refid="_toxic_wasteland_8cpp"/>
+      </node>
+      <node id="11">
+        <label>GalaxyGUI.h</label>
+        <link refid="_galaxy_g_u_i_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Planet.h</label>
+        <link refid="_planet_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>IceWorld.cpp</label>
+        <link refid="_ice_world_8cpp"/>
+      </node>
+      <node id="3">
+        <label>ClassFilter.cpp</label>
+        <link refid="_class_filter_8cpp"/>
+      </node>
+      <node id="6">
+        <label>EventHandler.h</label>
+        <link refid="_event_handler_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Spaceship.cpp</label>
+        <link refid="_spaceship_8cpp"/>
+      </node>
+      <node id="4">
+        <label>EventHandler.cpp</label>
+        <link refid="_event_handler_8cpp"/>
+      </node>
+      <node id="2">
+        <label>ClassFilter.h</label>
+        <link refid="_class_filter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>RockSlide.cpp</label>
+        <link refid="_rock_slide_8cpp"/>
+      </node>
+      <node id="5">
+        <label>Galaxy.cpp</label>
+        <link refid="_galaxy_8cpp"/>
+      </node>
+      <node id="14">
+        <label>Greenhouse.cpp</label>
+        <link refid="_greenhouse_8cpp"/>
+      </node>
+      <node id="19">
+        <label>PurpleGas.cpp</label>
+        <link refid="_purple_gas_8cpp"/>
+      </node>
+      <node id="20">
+        <label>PurpleGas.h</label>
+        <link refid="_purple_gas_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Explosion.h</label>
+        <link refid="_explosion_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>GalaxyGUI.cpp</label>
+        <link refid="_galaxy_g_u_i_8cpp"/>
+      </node>
+      <node id="17">
+        <label>IceWorld.h</label>
+        <link refid="_ice_world_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>SpaceObject.cpp</label>
+        <link refid="_space_object_8cpp"/>
+      </node>
+      <node id="10">
+        <label>Galaxy.h</label>
+        <link refid="_galaxy_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>RockSlide.h</label>
+        <link refid="_rock_slide_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Star.h</label>
+        <link refid="_star_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Spaceship.h</label>
+        <link refid="_spaceship_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>ToxicWasteland.h</label>
+        <link refid="_toxic_wasteland_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_space_object" prot="public">SpaceObject</innerclass>
+    <briefdescription>
+<para>A superclass used for objects in the grids of <ref refid="class_galaxy" kindref="compound">Galaxy</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="SpaceObject.h"/>
+  </compounddef>
+</doxygen>

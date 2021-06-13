@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_orbits_8cpp" kind="file" language="C++">
+    <compoundname>Orbits.cpp</compoundname>
+    <includes refid="_orbits_8h" local="yes">Orbits.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Orbits.h</label>
+        <link refid="_orbits_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>Orbits.cpp</label>
+        <link refid="_orbits_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_orbits_8cpp_1a6a6a522373b50b4ae018aee15659dcf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Moves</type>
+        <definition>Moves getMove</definition>
+        <argsstring>(long currentTurn, Movesets moveSet)</argsstring>
+        <name>getMove</name>
+        <param>
+          <type>long</type>
+          <declname>currentTurn</declname>
+        </param>
+        <param>
+          <type>Movesets</type>
+          <declname>moveSet</declname>
+        </param>
+        <briefdescription>
+<para>Get the move direction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="pre"><para>Planets are placed in the top right corner of their orbits.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>currentTurn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current iteration in the simulation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>moveSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Characterizes orbit path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Moves Direction. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Orbits.cpp" line="16" column="7" bodyfile="Orbits.cpp" bodystart="16" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="_orbits_8cpp_1af419f555abd9e28a8579376cb84f2ecc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateCoordinates</definition>
+        <argsstring>(int &amp;row, int &amp;col, Moves move, int gridSize)</argsstring>
+        <name>updateCoordinates</name>
+        <param>
+          <type>int &amp;</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>Moves</type>
+          <declname>move</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gridSize</declname>
+        </param>
+        <briefdescription>
+<para>Updates the coordinates based on the specified move. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertical positioning in the simulation window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Horizontal positioning in the simulation window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gridSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of grid to handle off-mapping (when an object moves past the boundaries, it appears on the other side of the grid). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Orbits.cpp" line="36" column="6" bodyfile="Orbits.cpp" bodystart="36" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="Orbits.cpp"/>
+  </compounddef>
+</doxygen>

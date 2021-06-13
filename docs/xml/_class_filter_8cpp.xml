@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_class_filter_8cpp" kind="file" language="C++">
+    <compoundname>ClassFilter.cpp</compoundname>
+    <includes refid="_class_filter_8h" local="yes">ClassFilter.h</includes>
+    <includes refid="_orbits_8h" local="yes">Orbits.h</includes>
+    <includes refid="_planet_8h" local="yes">Planet.h</includes>
+    <includes refid="_star_8h" local="yes">Star.h</includes>
+    <includes refid="_toxic_wasteland_8h" local="yes">ToxicWasteland.h</includes>
+    <includes refid="_ice_world_8h" local="yes">IceWorld.h</includes>
+    <includes refid="_purple_gas_8h" local="yes">PurpleGas.h</includes>
+    <includes refid="_rock_slide_8h" local="yes">RockSlide.h</includes>
+    <includes refid="_greenhouse_8h" local="yes">Greenhouse.h</includes>
+    <includes refid="_zed_8h" local="yes">Zed.h</includes>
+    <includes refid="_patawlian_8h" local="yes">Patawlian.h</includes>
+    <includes refid="_pink_goblin_8h" local="yes">PinkGoblin.h</includes>
+    <includes refid="_saveela_8h" local="yes">Saveela.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>Orbits.h</label>
+        <link refid="_orbits_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Greenhouse.h</label>
+        <link refid="_greenhouse_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SpaceObject.h</label>
+        <link refid="_space_object_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Saveela.h</label>
+        <link refid="_saveela_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>AlienBase.h</label>
+        <link refid="_alien_base_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Planet.h</label>
+        <link refid="_planet_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>ClassFilter.cpp</label>
+        <link refid="_class_filter_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Zed.h</label>
+        <link refid="_zed_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ClassFilter.h</label>
+        <link refid="_class_filter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>Patawlian.h</label>
+        <link refid="_patawlian_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>PurpleGas.h</label>
+        <link refid="_purple_gas_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>PinkGoblin.h</label>
+        <link refid="_pink_goblin_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>IceWorld.h</label>
+        <link refid="_ice_world_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>RockSlide.h</label>
+        <link refid="_rock_slide_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Star.h</label>
+        <link refid="_star_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ToxicWasteland.h</label>
+        <link refid="_toxic_wasteland_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_class_filter_8cpp_1a46f0acb169ff176eefb6e0ac6695072a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeSpaceObject</definition>
+        <argsstring>(string type, SpaceObject **spaceObject, Movesets moveset)</argsstring>
+        <name>initializeSpaceObject</name>
+        <param>
+          <type>string</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> **</type>
+          <declname>spaceObject</declname>
+        </param>
+        <param>
+          <type>Movesets</type>
+          <declname>moveset</declname>
+        </param>
+        <briefdescription>
+<para>Creates a <ref refid="class_space_object" kindref="compound">SpaceObject</ref> with a given type and moveset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type is a string fetched from getName() member method, which represents the class of the <ref refid="class_space_object" kindref="compound">SpaceObject</ref> passed to this method. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spaceObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a SpaceObject* to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>moveset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A predetermined orbit path defined by an enum Movesets. Options include: {STATIONARY, CLOSE, MEDIUM, RANDOM, CLOSECC, MEDIUMSLOW, FAR}. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ClassFilter.cpp" line="27" column="6" bodyfile="ClassFilter.cpp" bodystart="27" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="_class_filter_8cpp_1a9b634e100c608c4fc5522d7f0b7987c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeAlienBase</definition>
+        <argsstring>(string type, AlienBase **alienBase)</argsstring>
+        <name>initializeAlienBase</name>
+        <param>
+          <type>string</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> **</type>
+          <declname>alienBase</declname>
+        </param>
+        <briefdescription>
+<para>Creates a <ref refid="class_alien_base" kindref="compound">AlienBase</ref> with a given type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type is a string fetched from getName() member method, which represents the class of the <ref refid="class_alien_base" kindref="compound">AlienBase</ref> passed to this method. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spaceObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a AlienBase* to initialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ClassFilter.cpp" line="47" column="6" bodyfile="ClassFilter.cpp" bodystart="47" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="ClassFilter.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_event_handler_8cpp" kind="file" language="C++">
+    <compoundname>EventHandler.cpp</compoundname>
+    <includes refid="_event_handler_8h" local="yes">EventHandler.h</includes>
+    <includes refid="_class_filter_8h" local="yes">ClassFilter.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>Orbits.h</label>
+        <link refid="_orbits_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SpaceObject.h</label>
+        <link refid="_space_object_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>AlienBase.h</label>
+        <link refid="_alien_base_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Planet.h</label>
+        <link refid="_planet_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>EventHandler.h</label>
+        <link refid="_event_handler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EventHandler.cpp</label>
+        <link refid="_event_handler_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ClassFilter.h</label>
+        <link refid="_class_filter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>Spaceship.h</label>
+        <link refid="_spaceship_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_event_handler_8cpp_1a71665927f75d3f1d8f6a88b22b413dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int interactSpaceObject</definition>
+        <argsstring>(SpaceObject *spaceObject, SpaceObject *ship)</argsstring>
+        <name>interactSpaceObject</name>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>spaceObject</declname>
+        </param>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>ship</declname>
+        </param>
+        <briefdescription>
+<para>Facilitates colonization of a planet. There are three scenarios that can occur while a spaceship is exploring: 1) spaceship encounters empty planet: immediately colonizes. 2) spaceship encounters occupied enemy planet: battle occurs between the two aliens; if the spaceship wins, it colonizes the planet, otherwise the occupants remain on the planet and the spaceship explodes. 3) spaceship encounters friendly planet or star: no action occurs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spaceObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="class_space_object" kindref="compound">SpaceObject</ref>, which can be a planet or star. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ship</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ship that is encountering the <ref refid="class_space_object" kindref="compound">SpaceObject</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int 0 = no action, 1 = planet occupants win, 2 = ship colonizes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EventHandler.cpp" line="15" column="5" bodyfile="EventHandler.cpp" bodystart="15" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="_event_handler_8cpp_1ae45a3939c0c91efd57eb8164e47df737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int interactShips</definition>
+        <argsstring>(SpaceObject *ship1, SpaceObject *ship2)</argsstring>
+        <name>interactShips</name>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>ship1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>ship2</declname>
+        </param>
+        <briefdescription>
+<para>Facilitates battle between two spaceships. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ship1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ship2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int 0 = no fight, 1 = ship1 wins, 2 = ship2 wins. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EventHandler.cpp" line="43" column="5" bodyfile="EventHandler.cpp" bodystart="43" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="_event_handler_8cpp_1af3ce683f37c732f1b1f5be42912ab067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool updatePopulation</definition>
+        <argsstring>(SpaceObject *spaceObject, AlienBase *occupant)</argsstring>
+        <name>updatePopulation</name>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>spaceObject</declname>
+        </param>
+        <param>
+          <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> *</type>
+          <declname>occupant</declname>
+        </param>
+        <briefdescription>
+<para>Increases population of a planet until it reaches the max capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spaceObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_planet" kindref="compound">Planet</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>occupant</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Aliens occupying planet. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Full planet. </para>
+</simplesect>
+<simplesect kind="return"><para>false Not full planet. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EventHandler.cpp" line="68" column="6" bodyfile="EventHandler.cpp" bodystart="68" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="_event_handler_8cpp_1a0f95693b5102da773cd278a05ad5cd33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendShip</definition>
+        <argsstring>(AlienBase *occupant, SpaceObject **spaceship)</argsstring>
+        <name>sendShip</name>
+        <param>
+          <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> *</type>
+          <declname>occupant</declname>
+        </param>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> **</type>
+          <declname>spaceship</declname>
+        </param>
+        <briefdescription>
+<para>Spawns a spaceship if planet has reached max population. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>occupant</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The alien occupying the planet. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spaceship</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The spaceship, to be generated by the alien. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EventHandler.cpp" line="88" column="6" bodyfile="EventHandler.cpp" bodystart="88" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="EventHandler.cpp"/>
+  </compounddef>
+</doxygen>

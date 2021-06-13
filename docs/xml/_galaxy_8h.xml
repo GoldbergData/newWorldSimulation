@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_galaxy_8h" kind="file" language="C++">
+    <compoundname>Galaxy.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_space_object_8h" local="yes">SpaceObject.h</includes>
+    <includes refid="_alien_base_8h" local="yes">AlienBase.h</includes>
+    <includes refid="_spaceship_8h" local="yes">Spaceship.h</includes>
+    <includedby refid="_galaxy_8cpp" local="yes">Galaxy.cpp</includedby>
+    <includedby refid="_galaxy_g_u_i_8cpp" local="yes">GalaxyGUI.cpp</includedby>
+    <includedby refid="_galaxy_g_u_i_8h" local="yes">GalaxyGUI.h</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>Orbits.h</label>
+        <link refid="_orbits_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SpaceObject.h</label>
+        <link refid="_space_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>AlienBase.h</label>
+        <link refid="_alien_base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>Galaxy.h</label>
+        <link refid="_galaxy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Spaceship.h</label>
+        <link refid="_spaceship_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>GalaxyGUI.h</label>
+        <link refid="_galaxy_g_u_i_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Galaxy.cpp</label>
+        <link refid="_galaxy_8cpp"/>
+      </node>
+      <node id="3">
+        <label>GalaxyGUI.cpp</label>
+        <link refid="_galaxy_g_u_i_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Galaxy.h</label>
+        <link refid="_galaxy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_galaxy" prot="public">Galaxy</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_galaxy_8h_1aa5cb2002c1b6821c93a2b782b5431bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string printHelper</definition>
+        <argsstring>(SpaceObject *spaceObject, bool fencepost)</argsstring>
+        <name>printHelper</name>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>spaceObject</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fencepost</declname>
+        </param>
+        <briefdescription>
+<para>Print helper for printing out a grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spaceObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="class_space_object" kindref="compound">SpaceObject</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fencepost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A bool specifying whether the print is a fencepost. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string A printed output. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="160" column="8" bodyfile="Galaxy.cpp" bodystart="238" bodyend="250" declfile="Galaxy.h" declline="160" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="class_galaxy" kindref="compound">Galaxy</ref> is used to store all grid objects required for the simulation. Additionally, <ref refid="class_galaxy" kindref="compound">Galaxy</ref> handles all the computation for updating objects&apos; positions in the grid and interaction between other objects on encounters. All stored objects in the grid will be initialized as nullptrs, which result in an empty space when drawing the simulation. A requirement for all galaxies is a predefined map.txt file. Two are provided to show examples (see Map1.txt, Map2.txt). </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="Galaxy.h"/>
+  </compounddef>
+</doxygen>

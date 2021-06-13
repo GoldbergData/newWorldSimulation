@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_rock_slide" kind="class" language="C++" prot="public">
+    <compoundname>RockSlide</compoundname>
+    <basecompoundref refid="class_planet" prot="public" virt="non-virtual">Planet</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rock_slide_1a1154cf77420cf16b79758c972d14e92d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RockSlide::RockSlide</definition>
+        <argsstring>(Movesets moveset)</argsstring>
+        <name>RockSlide</name>
+        <param>
+          <type>Movesets</type>
+          <declname>moveset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RockSlide.h" line="21" column="5" bodyfile="RockSlide.cpp" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rock_slide_1a16c75d8d4b3644ec9f41f9c481f2461a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int RockSlide::getHazard</definition>
+        <argsstring>() const</argsstring>
+        <name>getHazard</name>
+        <reimplements refid="class_planet_1a2bb1e03e4889ec74d09d4172535b253f">getHazard</reimplements>
+        <briefdescription>
+<para>Get the hazard of the planet, which reduces population growth of the occupants on the planet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int Hazard. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RockSlide.h" line="22" column="17" bodyfile="RockSlide.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rock_slide_1a3cdfe346bb2a6bd142e46e3777107274" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string RockSlide::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <reimplements refid="class_planet_1a71b53477ffa0201f2096bcd9f30f9d79">getName</reimplements>
+        <briefdescription>
+<para>Get the name of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string Name of the class. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RockSlide.h" line="23" column="20" bodyfile="RockSlide.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RockSlide</label>
+        <link refid="class_rock_slide"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+      <node id="2">
+        <label>Planet</label>
+        <link refid="class_planet"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>RockSlide</label>
+        <link refid="class_rock_slide"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+      <node id="2">
+        <label>Planet</label>
+        <link refid="class_planet"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="RockSlide.h" line="18" column="1" bodyfile="RockSlide.h" bodystart="18" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_planet_1afca216f7779d94e5cff0e731cfd8e22d" prot="public" virt="virtual"><scope>RockSlide</scope><name>getBonus</name></member>
+      <member refid="class_planet_1a8a99d7aa6cf6ae17b3557f284aa0b983" prot="public" virt="non-virtual"><scope>RockSlide</scope><name>getCapacity</name></member>
+      <member refid="class_rock_slide_1a16c75d8d4b3644ec9f41f9c481f2461a" prot="public" virt="virtual"><scope>RockSlide</scope><name>getHazard</name></member>
+      <member refid="class_space_object_1a9fe801118d2b1c48183dabf53b92bb30" prot="public" virt="non-virtual"><scope>RockSlide</scope><name>getMoveset</name></member>
+      <member refid="class_rock_slide_1a3cdfe346bb2a6bd142e46e3777107274" prot="public" virt="virtual"><scope>RockSlide</scope><name>getName</name></member>
+      <member refid="class_planet_1a391e4a6fba35535c7bdf9e60a69acdf0" prot="public" virt="non-virtual"><scope>RockSlide</scope><name>getOccupant</name></member>
+      <member refid="class_planet_1a59c5ec990d712d68e0eac74e63ee2d8c" prot="public" virt="non-virtual"><scope>RockSlide</scope><name>getTemperature</name></member>
+      <member refid="class_planet_1a3e80a10130f33b5e74b869f73f108f68" prot="public" virt="virtual"><scope>RockSlide</scope><name>isHabitable</name></member>
+      <member refid="class_planet_1a869b3c7f4cb0398d28dc25664bc45073" prot="public" virt="non-virtual"><scope>RockSlide</scope><name>Planet</name></member>
+      <member refid="class_rock_slide_1a1154cf77420cf16b79758c972d14e92d" prot="public" virt="non-virtual"><scope>RockSlide</scope><name>RockSlide</name></member>
+      <member refid="class_planet_1ad75da2be32f572291190b1f6e0b9988d" prot="public" virt="non-virtual"><scope>RockSlide</scope><name>setOccupant</name></member>
+      <member refid="class_space_object_1ada1c7e18d754a1b5d3aed74728eb9ae1" prot="public" virt="non-virtual"><scope>RockSlide</scope><name>SpaceObject</name></member>
+      <member refid="class_space_object_1a75db7c70ae486ab5722d915debb580eb" prot="public" virt="non-virtual"><scope>RockSlide</scope><name>SpaceObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

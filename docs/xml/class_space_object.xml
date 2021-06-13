@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_space_object" kind="class" language="C++" prot="public">
+    <compoundname>SpaceObject</compoundname>
+    <derivedcompoundref refid="class_explosion" prot="public" virt="non-virtual">Explosion</derivedcompoundref>
+    <derivedcompoundref refid="class_planet" prot="public" virt="non-virtual">Planet</derivedcompoundref>
+    <derivedcompoundref refid="class_spaceship" prot="public" virt="non-virtual">Spaceship</derivedcompoundref>
+    <derivedcompoundref refid="class_star" prot="public" virt="non-virtual">Star</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_space_object_1a976c6bf5f76d3e867155656a00f458bd" prot="private" static="no" mutable="no">
+        <type>Movesets</type>
+        <definition>Movesets SpaceObject::moveset</definition>
+        <argsstring></argsstring>
+        <name>moveset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpaceObject.h" line="21" column="14" bodyfile="SpaceObject.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_space_object_1ada1c7e18d754a1b5d3aed74728eb9ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpaceObject::SpaceObject</definition>
+        <argsstring>()</argsstring>
+        <name>SpaceObject</name>
+        <briefdescription>
+<para>Construct a new Space Object object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpaceObject.h" line="27" column="5" bodyfile="SpaceObject.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_object_1a75db7c70ae486ab5722d915debb580eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpaceObject::SpaceObject</definition>
+        <argsstring>(Movesets moveset)</argsstring>
+        <name>SpaceObject</name>
+        <param>
+          <type>Movesets</type>
+          <declname>moveset</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Space Object object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>moveset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orbital path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpaceObject.h" line="34" column="5" bodyfile="SpaceObject.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_object_1aa687c78e50a36b439d529d294fe5a753" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SpaceObject::isHabitable</definition>
+        <argsstring>() const</argsstring>
+        <name>isHabitable</name>
+        <reimplementedby refid="class_planet_1a3e80a10130f33b5e74b869f73f108f68">isHabitable</reimplementedby>
+        <briefdescription>
+<para>If a <ref refid="class_space_object" kindref="compound">SpaceObject</ref> is habitable. Not habitable (false) by default. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Habitable. </para>
+</simplesect>
+<simplesect kind="return"><para>false Not habitable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpaceObject.h" line="42" column="18" bodyfile="SpaceObject.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_object_1a9fe801118d2b1c48183dabf53b92bb30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Movesets</type>
+        <definition>Movesets SpaceObject::getMoveset</definition>
+        <argsstring>() const</argsstring>
+        <name>getMoveset</name>
+        <briefdescription>
+<para>Get the Moveset, which is the orbital path of a <ref refid="class_space_object" kindref="compound">SpaceObject</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Movesets </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpaceObject.h" line="49" column="14" bodyfile="SpaceObject.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_object_1a13f951c4ab7a033c6bf023e469304381" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string SpaceObject::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <reimplementedby refid="class_explosion_1a8dcc64686a11a79267716a0985babbc3">getName</reimplementedby>
+        <reimplementedby refid="class_greenhouse_1a0ec819d4b5b627b8a7fe7fa4c0a9129b">getName</reimplementedby>
+        <reimplementedby refid="class_ice_world_1ae07dc2d281358a0ea33560374dc892a6">getName</reimplementedby>
+        <reimplementedby refid="class_planet_1a71b53477ffa0201f2096bcd9f30f9d79">getName</reimplementedby>
+        <reimplementedby refid="class_purple_gas_1ae0d987946a535897c4734a045477e909">getName</reimplementedby>
+        <reimplementedby refid="class_rock_slide_1a3cdfe346bb2a6bd142e46e3777107274">getName</reimplementedby>
+        <reimplementedby refid="class_star_1acf2ce02424766b63f58d582672a1cb23">getName</reimplementedby>
+        <reimplementedby refid="class_toxic_wasteland_1a2a818c25226021411ecaced84923e018">getName</reimplementedby>
+        <briefdescription>
+<para>Get the class name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string class name. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpaceObject.h" line="56" column="20" bodyfile="SpaceObject.cpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10">
+        <label>Star</label>
+        <link refid="class_star"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ToxicWasteland</label>
+        <link refid="class_toxic_wasteland"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Explosion</label>
+        <link refid="class_explosion"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>RockSlide</label>
+        <link refid="class_rock_slide"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Spaceship</label>
+        <link refid="class_spaceship"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>IceWorld</label>
+        <link refid="class_ice_world"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Greenhouse</label>
+        <link refid="class_greenhouse"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>PurpleGas</label>
+        <link refid="class_purple_gas"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+      <node id="3">
+        <label>Planet</label>
+        <link refid="class_planet"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="SpaceObject.h" line="19" column="1" bodyfile="SpaceObject.h" bodystart="19" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_space_object_1a9fe801118d2b1c48183dabf53b92bb30" prot="public" virt="non-virtual"><scope>SpaceObject</scope><name>getMoveset</name></member>
+      <member refid="class_space_object_1a13f951c4ab7a033c6bf023e469304381" prot="public" virt="virtual"><scope>SpaceObject</scope><name>getName</name></member>
+      <member refid="class_space_object_1aa687c78e50a36b439d529d294fe5a753" prot="public" virt="virtual"><scope>SpaceObject</scope><name>isHabitable</name></member>
+      <member refid="class_space_object_1a976c6bf5f76d3e867155656a00f458bd" prot="private" virt="non-virtual"><scope>SpaceObject</scope><name>moveset</name></member>
+      <member refid="class_space_object_1ada1c7e18d754a1b5d3aed74728eb9ae1" prot="public" virt="non-virtual"><scope>SpaceObject</scope><name>SpaceObject</name></member>
+      <member refid="class_space_object_1a75db7c70ae486ab5722d915debb580eb" prot="public" virt="non-virtual"><scope>SpaceObject</scope><name>SpaceObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

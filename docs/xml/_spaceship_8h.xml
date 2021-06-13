@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_spaceship_8h" kind="file" language="C++">
+    <compoundname>Spaceship.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="_orbits_8h" local="yes">Orbits.h</includes>
+    <includes refid="_space_object_8h" local="yes">SpaceObject.h</includes>
+    <includes refid="_alien_base_8h" local="yes">AlienBase.h</includes>
+    <includedby refid="_event_handler_8h" local="yes">EventHandler.h</includedby>
+    <includedby refid="_galaxy_8h" local="yes">Galaxy.h</includedby>
+    <includedby refid="_galaxy_g_u_i_8cpp" local="yes">GalaxyGUI.cpp</includedby>
+    <includedby refid="_spaceship_8cpp" local="yes">Spaceship.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Orbits.h</label>
+        <link refid="_orbits_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SpaceObject.h</label>
+        <link refid="_space_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>AlienBase.h</label>
+        <link refid="_alien_base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>Spaceship.h</label>
+        <link refid="_spaceship_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="7">
+        <label>GalaxyGUI.h</label>
+        <link refid="_galaxy_g_u_i_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventHandler.h</label>
+        <link refid="_event_handler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Spaceship.cpp</label>
+        <link refid="_spaceship_8cpp"/>
+      </node>
+      <node id="3">
+        <label>EventHandler.cpp</label>
+        <link refid="_event_handler_8cpp"/>
+      </node>
+      <node id="4">
+        <label>Galaxy.cpp</label>
+        <link refid="_galaxy_8cpp"/>
+      </node>
+      <node id="6">
+        <label>GalaxyGUI.cpp</label>
+        <link refid="_galaxy_g_u_i_8cpp"/>
+      </node>
+      <node id="5">
+        <label>Galaxy.h</label>
+        <link refid="_galaxy_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Spaceship.h</label>
+        <link refid="_spaceship_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_spaceship" prot="public">Spaceship</innerclass>
+    <briefdescription>
+<para>A spaceship is used when the population of a planet reaches its max capacity. The primary purpose is to occupy other planets through exploration of the galaxy. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>John Nguyen, Joshua Goldberg (<ulink url="mailto:jvn1567@gmail.com">jvn1567@gmail.com</ulink>, <ulink url="mailto:J.GOLDBERG4674@edmail.edcc.edu">J.GOLDBERG4674@edmail.edcc.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-06-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="Spaceship.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,6 @@
+@INCLUDE                = Doxyfile
+PROJECT_BRIEF           = newWorldSimulation
+GENERATE_HTML           = NO
+GENERATE_XML            = YES
+XML_PROGRAMLISTING      = NO
+M_SHOW_UNDOCUMENTED     = YES

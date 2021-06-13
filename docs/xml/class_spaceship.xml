@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_spaceship" kind="class" language="C++" prot="public">
+    <compoundname>Spaceship</compoundname>
+    <basecompoundref refid="class_space_object" prot="public" virt="non-virtual">SpaceObject</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spaceship_1a1808f9abd4e10597f6e59c717856b567" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> *</type>
+        <definition>AlienBase* Spaceship::occupant</definition>
+        <argsstring></argsstring>
+        <name>occupant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Spaceship.h" line="25" column="15" bodyfile="Spaceship.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spaceship_1aa5a0149fa6fa131f1db06d00c202e219" prot="private" static="no" mutable="no">
+        <type>Moves</type>
+        <definition>Moves Spaceship::lastMove</definition>
+        <argsstring></argsstring>
+        <name>lastMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Spaceship.h" line="26" column="11" bodyfile="Spaceship.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spaceship_1a6977e4820ae8718e978509a0e6b05371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Spaceship::Spaceship</definition>
+        <argsstring>(AlienBase *)</argsstring>
+        <name>Spaceship</name>
+        <param>
+          <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> *</type>
+          <defname>occupant</defname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_spaceship" kindref="compound">Spaceship</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Spaceship.h" line="32" column="5" bodyfile="Spaceship.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaceship_1a20c6b312931d93142365dc881dd19f32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> *</type>
+        <definition>AlienBase * Spaceship::getOccupant</definition>
+        <argsstring>() const</argsstring>
+        <name>getOccupant</name>
+        <briefdescription>
+<para>Get the occupant of the spaceship. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>AlienBase* Alien. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Spaceship.h" line="39" column="15" bodyfile="Spaceship.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaceship_1a46ac2a4f3fa29dc6dfacbbb0e7d9cb00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Moves</type>
+        <definition>Moves Spaceship::getLastMove</definition>
+        <argsstring>() const</argsstring>
+        <name>getLastMove</name>
+        <briefdescription>
+<para>Get the last move of the spaceship. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Moves Direction. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Spaceship.h" line="46" column="11" bodyfile="Spaceship.cpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaceship_1ac5681c2f823e7525ba30d27a579d73f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spaceship::setLastMove</definition>
+        <argsstring>(Moves move)</argsstring>
+        <name>setLastMove</name>
+        <param>
+          <type>Moves</type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+<para>Set the last move of the spaceship. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Spaceship.h" line="53" column="10" bodyfile="Spaceship.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Spaceship</label>
+        <link refid="class_spaceship"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Spaceship</label>
+        <link refid="class_spaceship"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="Spaceship.h" line="23" column="1" bodyfile="Spaceship.h" bodystart="23" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_spaceship_1a46ac2a4f3fa29dc6dfacbbb0e7d9cb00" prot="public" virt="non-virtual"><scope>Spaceship</scope><name>getLastMove</name></member>
+      <member refid="class_space_object_1a9fe801118d2b1c48183dabf53b92bb30" prot="public" virt="non-virtual"><scope>Spaceship</scope><name>getMoveset</name></member>
+      <member refid="class_space_object_1a13f951c4ab7a033c6bf023e469304381" prot="public" virt="virtual"><scope>Spaceship</scope><name>getName</name></member>
+      <member refid="class_spaceship_1a20c6b312931d93142365dc881dd19f32" prot="public" virt="non-virtual"><scope>Spaceship</scope><name>getOccupant</name></member>
+      <member refid="class_space_object_1aa687c78e50a36b439d529d294fe5a753" prot="public" virt="virtual"><scope>Spaceship</scope><name>isHabitable</name></member>
+      <member refid="class_spaceship_1aa5a0149fa6fa131f1db06d00c202e219" prot="private" virt="non-virtual"><scope>Spaceship</scope><name>lastMove</name></member>
+      <member refid="class_spaceship_1a1808f9abd4e10597f6e59c717856b567" prot="private" virt="non-virtual"><scope>Spaceship</scope><name>occupant</name></member>
+      <member refid="class_spaceship_1ac5681c2f823e7525ba30d27a579d73f4" prot="public" virt="non-virtual"><scope>Spaceship</scope><name>setLastMove</name></member>
+      <member refid="class_space_object_1ada1c7e18d754a1b5d3aed74728eb9ae1" prot="public" virt="non-virtual"><scope>Spaceship</scope><name>SpaceObject</name></member>
+      <member refid="class_space_object_1a75db7c70ae486ab5722d915debb580eb" prot="public" virt="non-virtual"><scope>Spaceship</scope><name>SpaceObject</name></member>
+      <member refid="class_spaceship_1a6977e4820ae8718e978509a0e6b05371" prot="public" virt="non-virtual"><scope>Spaceship</scope><name>Spaceship</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

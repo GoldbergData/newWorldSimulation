@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_explosion" kind="class" language="C++" prot="public">
+    <compoundname>Explosion</compoundname>
+    <basecompoundref refid="class_space_object" prot="public" virt="non-virtual">SpaceObject</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_explosion_1a66a02d5beabe68dc0061a128b1410b72" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Explosion::stage</definition>
+        <argsstring></argsstring>
+        <name>stage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Explosion.h" line="21" column="9" bodyfile="Explosion.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_explosion_1a3686b2a9c2072b43726734bdba034b81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Explosion::Explosion</definition>
+        <argsstring>()</argsstring>
+        <name>Explosion</name>
+        <briefdescription>
+<para>Construct a new <ref refid="class_explosion" kindref="compound">Explosion</ref> object. Sets the stage to 9 (the biggest) explosion size. As <ref refid="class_explosion_1abedb3f96df9e5b2ea8bd93f4f9378543" kindref="member">decrementStage()</ref> is called, the explosion size shrinks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Explosion.h" line="28" column="5" bodyfile="Explosion.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_explosion_1a8dcc64686a11a79267716a0985babbc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string Explosion::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <reimplements refid="class_space_object_1a13f951c4ab7a033c6bf023e469304381">getName</reimplements>
+        <briefdescription>
+<para>Get the Name object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Explosion.h" line="35" column="20" bodyfile="Explosion.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_explosion_1abb8850469b49c72435a33c58ff1257ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Explosion::getStage</definition>
+        <argsstring>() const</argsstring>
+        <name>getStage</name>
+        <briefdescription>
+<para>Get the Stage object. A stage determines the size of the explosion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Explosion.h" line="42" column="9" bodyfile="Explosion.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_explosion_1abedb3f96df9e5b2ea8bd93f4f9378543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Explosion::decrementStage</definition>
+        <argsstring>()</argsstring>
+        <name>decrementStage</name>
+        <briefdescription>
+<para>Reduces the stage (size) of the explosion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Explosion.h" line="48" column="10" bodyfile="Explosion.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Explosion</label>
+        <link refid="class_explosion"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Explosion</label>
+        <link refid="class_explosion"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceObject</label>
+        <link refid="class_space_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="Explosion.h" line="19" column="1" bodyfile="Explosion.h" bodystart="19" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_explosion_1abedb3f96df9e5b2ea8bd93f4f9378543" prot="public" virt="non-virtual"><scope>Explosion</scope><name>decrementStage</name></member>
+      <member refid="class_explosion_1a3686b2a9c2072b43726734bdba034b81" prot="public" virt="non-virtual"><scope>Explosion</scope><name>Explosion</name></member>
+      <member refid="class_space_object_1a9fe801118d2b1c48183dabf53b92bb30" prot="public" virt="non-virtual"><scope>Explosion</scope><name>getMoveset</name></member>
+      <member refid="class_explosion_1a8dcc64686a11a79267716a0985babbc3" prot="public" virt="virtual"><scope>Explosion</scope><name>getName</name></member>
+      <member refid="class_explosion_1abb8850469b49c72435a33c58ff1257ef" prot="public" virt="non-virtual"><scope>Explosion</scope><name>getStage</name></member>
+      <member refid="class_space_object_1aa687c78e50a36b439d529d294fe5a753" prot="public" virt="virtual"><scope>Explosion</scope><name>isHabitable</name></member>
+      <member refid="class_space_object_1ada1c7e18d754a1b5d3aed74728eb9ae1" prot="public" virt="non-virtual"><scope>Explosion</scope><name>SpaceObject</name></member>
+      <member refid="class_space_object_1a75db7c70ae486ab5722d915debb580eb" prot="public" virt="non-virtual"><scope>Explosion</scope><name>SpaceObject</name></member>
+      <member refid="class_explosion_1a66a02d5beabe68dc0061a128b1410b72" prot="private" virt="non-virtual"><scope>Explosion</scope><name>stage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

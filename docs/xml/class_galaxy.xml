@@ -1,0 +1,640 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_galaxy" kind="class" language="C++" prot="public">
+    <compoundname>Galaxy</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_galaxy_1aff92fe23ca8e15969f5ed38074777d35" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; <ref refid="class_space_object" kindref="compound">SpaceObject</ref> * &gt; &gt; *</type>
+        <definition>vector&lt;vector&lt;SpaceObject*&gt; &gt;* Galaxy::galaxy</definition>
+        <argsstring></argsstring>
+        <name>galaxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="41" column="12" bodyfile="Galaxy.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_galaxy_1a38057c2f881fd16389d1d8f90de28796" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; <ref refid="class_space_object" kindref="compound">SpaceObject</ref> * &gt; &gt; *</type>
+        <definition>vector&lt;vector&lt;SpaceObject*&gt; &gt;* Galaxy::spaceships</definition>
+        <argsstring></argsstring>
+        <name>spaceships</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="42" column="12" bodyfile="Galaxy.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_galaxy_1ac2f357d522b878444b2c210315d1744f" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; <ref refid="class_space_object" kindref="compound">SpaceObject</ref> * &gt; &gt; *</type>
+        <definition>vector&lt;vector&lt;SpaceObject*&gt; &gt;* Galaxy::explosions</definition>
+        <argsstring></argsstring>
+        <name>explosions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="43" column="12" bodyfile="Galaxy.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_galaxy_1a59503bdf169d7af9efcc226854dc9429" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;out, const Galaxy &amp;list)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_galaxy" kindref="compound">Galaxy</ref> &amp;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Helper printer method used to print the grid of objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ostream&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="36" column="12" bodyfile="Galaxy.cpp" bodystart="196" bodyend="236"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_galaxy_1a40bb8e9c6fb435226b056e313eb798ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Galaxy::Galaxy</definition>
+        <argsstring>(int rows, int cols, string filename)</argsstring>
+        <name>Galaxy</name>
+        <param>
+          <type>int</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_galaxy" kindref="compound">Galaxy</ref> object. Generate three empty grids for members galaxy, spaceships, and explosions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of rows (y, i.e height) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of cols (x, i.e width) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uses a predefined map file to populate the grids&apos; default values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="54" column="5" bodyfile="Galaxy.cpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1a819ce689c1fe9b820bf7b6ba075c2400" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; <ref refid="class_space_object" kindref="compound">SpaceObject</ref> * &gt; &gt; *</type>
+        <definition>vector&lt; vector&lt; SpaceObject * &gt; &gt; * Galaxy::generateEmptyGrid</definition>
+        <argsstring>(int rows, int cols)</argsstring>
+        <name>generateEmptyGrid</name>
+        <param>
+          <type>int</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+<para>Generic method to create an empty grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of rows (y, i.e height) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of cols (x, i.e width) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector&lt;vector&lt;SpaceObject*&gt;&gt;* A grid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="63" column="12" bodyfile="Galaxy.cpp" bodystart="34" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1a78741b49a07ed9f0d2d0fd020d232e1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Galaxy::generateFromFile</definition>
+        <argsstring>(string filename)</argsstring>
+        <name>generateFromFile</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>A predefined map file used to populate the grids with objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map file name ending in .txt. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="70" column="10" bodyfile="Galaxy.cpp" bodystart="48" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1a054fb990d9fa0aafd900912beaeb9834" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+        <definition>SpaceObject * Galaxy::getSpaceObject</definition>
+        <argsstring>(int row, int col) const</argsstring>
+        <name>getSpaceObject</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Get the <ref refid="class_space_object" kindref="compound">SpaceObject</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of rows (y, i.e height) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of cols (x, i.e width) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SpaceObject* <ref refid="class_space_object" kindref="compound">SpaceObject</ref> at the location in the grid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="79" column="17" bodyfile="Galaxy.cpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1a7ec6858ab998ce9f8007e6e652ad1fd4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_alien_base" kindref="compound">AlienBase</ref> *</type>
+        <definition>AlienBase * Galaxy::getOccupant</definition>
+        <argsstring>(int row, int col) const</argsstring>
+        <name>getOccupant</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Get the alien (occupant) of a planet from the galaxy grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of rows (y, i.e height) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of cols (x, i.e width) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>AlienBase* <ref refid="class_alien_base" kindref="compound">AlienBase</ref> at the location in the grid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="88" column="15" bodyfile="Galaxy.cpp" bodystart="82" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1a342225cdb516eb23306fd049d23d32b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+        <definition>SpaceObject * Galaxy::getSpaceship</definition>
+        <argsstring>(int row, int col) const</argsstring>
+        <name>getSpaceship</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Get the spaceship object from the spaceship grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of rows (y, i.e height) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of cols (x, i.e width) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SpaceObject* <ref refid="class_space_object" kindref="compound">SpaceObject</ref> (spaceship) at the location in the grid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="97" column="17" bodyfile="Galaxy.cpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1aa2f14d637d381bd7769a551a4b6017a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+        <definition>SpaceObject * Galaxy::getExplosion</definition>
+        <argsstring>(int row, int col) const</argsstring>
+        <name>getExplosion</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Get the explosion object from the spaceship grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of rows (y, i.e height) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of cols (x, i.e width) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SpaceObject* <ref refid="class_space_object" kindref="compound">SpaceObject</ref> (explosion) at the location in the grid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="106" column="17" bodyfile="Galaxy.cpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1a2123334fdff8c73579e85a01c40ab6eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Galaxy::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <briefdescription>
+<para>Get the Size object. Number of rows and columns in the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="pre"><para>Assumes the grid is a square.</para>
+</simplesect>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="114" column="9" bodyfile="Galaxy.cpp" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1a97cd607381249e56b597375950e8480a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Galaxy::update</definition>
+        <argsstring>(long turn)</argsstring>
+        <name>update</name>
+        <param>
+          <type>long</type>
+          <declname>turn</declname>
+        </param>
+        <briefdescription>
+<para>Updates the state of all grids. New grids are generated each turn of the iteration and replace the old grids. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>turn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One iteration of the simulation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="122" column="10" bodyfile="Galaxy.cpp" bodystart="102" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1ae98aa94efe1b7e5aa21f77f3074aed42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Galaxy::updateSpaceObject</definition>
+        <argsstring>(long turn, int row, int col, SpaceObject *spaceObject, vector&lt; vector&lt; SpaceObject * &gt;&gt; *newGalaxy, vector&lt; vector&lt; SpaceObject * &gt;&gt; *newShips)</argsstring>
+        <name>updateSpaceObject</name>
+        <param>
+          <type>long</type>
+          <declname>turn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>spaceObject</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; <ref refid="class_space_object" kindref="compound">SpaceObject</ref> * &gt;&gt; *</type>
+          <declname>newGalaxy</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; <ref refid="class_space_object" kindref="compound">SpaceObject</ref> * &gt;&gt; *</type>
+          <declname>newShips</declname>
+        </param>
+        <briefdescription>
+<para>Updates the population count, <ref refid="class_space_object" kindref="compound">SpaceObject</ref> positions, and spawns spaceships. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>turn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current iteration of the simulation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of rows (y, i.e height) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of cols (x, i.e width) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spaceObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single <ref refid="class_space_object" kindref="compound">SpaceObject</ref> in the galaxy grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newGalaxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A new galaxy grid used for repositioning. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newShips</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A new spaceship grid used for repositioning. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="135" column="10" bodyfile="Galaxy.cpp" bodystart="132" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_galaxy_1a894c8953607f1e0c553a0cae62aec7e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Galaxy::updateShip</definition>
+        <argsstring>(long turn, int row, int col, SpaceObject *spaceShip, vector&lt; vector&lt; SpaceObject * &gt;&gt; *newGalaxy, vector&lt; vector&lt; SpaceObject * &gt;&gt; *newShips, vector&lt; vector&lt; SpaceObject * &gt;&gt; *newExplosions)</argsstring>
+        <name>updateShip</name>
+        <param>
+          <type>long</type>
+          <declname>turn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="class_space_object" kindref="compound">SpaceObject</ref> *</type>
+          <declname>spaceShip</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; <ref refid="class_space_object" kindref="compound">SpaceObject</ref> * &gt;&gt; *</type>
+          <declname>newGalaxy</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; <ref refid="class_space_object" kindref="compound">SpaceObject</ref> * &gt;&gt; *</type>
+          <declname>newShips</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; <ref refid="class_space_object" kindref="compound">SpaceObject</ref> * &gt;&gt; *</type>
+          <declname>newExplosions</declname>
+        </param>
+        <briefdescription>
+<para>Decides spaceship actions (moving and interaction with other SpaceObjects). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>turn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current iteration of the simulation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of rows (y, i.e height) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of cols (x, i.e width) in the grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spaceShip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single spaceship in the spaceship grid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newGalaxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A new galaxy grid used for repositioning. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newShips</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A new spaceship grid used for repositioning. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newExplosions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A new explosion grid used for repositioning. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Galaxy.h" line="148" column="10" bodyfile="Galaxy.cpp" bodystart="151" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Galaxy.h" line="28" column="1" bodyfile="Galaxy.h" bodystart="28" bodyend="151"/>
+    <listofallmembers>
+      <member refid="class_galaxy_1ac2f357d522b878444b2c210315d1744f" prot="private" virt="non-virtual"><scope>Galaxy</scope><name>explosions</name></member>
+      <member refid="class_galaxy_1a40bb8e9c6fb435226b056e313eb798ff" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>Galaxy</name></member>
+      <member refid="class_galaxy_1aff92fe23ca8e15969f5ed38074777d35" prot="private" virt="non-virtual"><scope>Galaxy</scope><name>galaxy</name></member>
+      <member refid="class_galaxy_1a819ce689c1fe9b820bf7b6ba075c2400" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>generateEmptyGrid</name></member>
+      <member refid="class_galaxy_1a78741b49a07ed9f0d2d0fd020d232e1d" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>generateFromFile</name></member>
+      <member refid="class_galaxy_1aa2f14d637d381bd7769a551a4b6017a0" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>getExplosion</name></member>
+      <member refid="class_galaxy_1a7ec6858ab998ce9f8007e6e652ad1fd4" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>getOccupant</name></member>
+      <member refid="class_galaxy_1a2123334fdff8c73579e85a01c40ab6eb" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>getSize</name></member>
+      <member refid="class_galaxy_1a054fb990d9fa0aafd900912beaeb9834" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>getSpaceObject</name></member>
+      <member refid="class_galaxy_1a342225cdb516eb23306fd049d23d32b5" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>getSpaceship</name></member>
+      <member refid="class_galaxy_1a59503bdf169d7af9efcc226854dc9429" prot="private" virt="non-virtual"><scope>Galaxy</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_galaxy_1a38057c2f881fd16389d1d8f90de28796" prot="private" virt="non-virtual"><scope>Galaxy</scope><name>spaceships</name></member>
+      <member refid="class_galaxy_1a97cd607381249e56b597375950e8480a" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>update</name></member>
+      <member refid="class_galaxy_1a894c8953607f1e0c553a0cae62aec7e1" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>updateShip</name></member>
+      <member refid="class_galaxy_1ae98aa94efe1b7e5aa21f77f3074aed42" prot="public" virt="non-virtual"><scope>Galaxy</scope><name>updateSpaceObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
