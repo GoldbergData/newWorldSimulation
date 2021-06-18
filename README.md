@@ -8,7 +8,7 @@ This program simulates alien species colonizing planets in a star system. Aliens
 
 Aliens encountering other species will fight each other for control. The simulation stores its state in three 2-dimensional vectors, for placement of the planets, spaceships, and explosions for flair. The user can choose to start, stop, and reset the simulation in the GUI displaying the simulation, as well as change both the background and initial placement map.
 
-<img src="docs/newWorldSim.gif" alt="Simulation" width="50%" style="display: block">
+<img src="docs/newWorldSim.gif" alt="Simulation" width="50%" style="float: right">
 
 # Usage
 
