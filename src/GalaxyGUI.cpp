@@ -155,7 +155,7 @@ void GalaxyGUI::createRadioButtons() {
     createSingleRadio("Blue Mist", &grbBackground3);
     createSingleRadio("Purple Haze", &grbBackground3);
     //checks for radio buttons being changed
-    window->setTimerListener(200, [this] {
+    window->setTimerListener(300, [this] {
         this->checkImage();
     });
 }
