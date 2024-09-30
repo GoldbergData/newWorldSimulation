@@ -18,4 +18,4 @@ There are a couple use-cases for the simulation:
 - Create your own aliens. This is probably the more interesting approach, since you can define the behavior of your own aliens by inheriting `AlienBase` and overriding exploration and population.
 - Create your own planets. Another interesting approach for this code base, as the simulation is heavily dependent on the planet attributes.
 
-Note: So far, the aliens and planets implemented are simplistic. A next step would be to develop a dynamic fight between aliens based on attributes, such as HP, attack, etc. Planets are also one-dimensional. Characteristics can be defined for planets such as temperature (can be dictated by proximity from a sun, hazard, and population growth bonus.
+Note: So far, the aliens and planets implemented are simplistic. A next step would be to develop a dynamic fight between aliens based on attributes, such as HP, attack, etc. Planets are also one-dimensional. Characteristics can be defined for planets such as temperature (can be dictated by proximity from a sun, hazard, and population growth bonus).
